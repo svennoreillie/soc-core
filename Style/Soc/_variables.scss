@@ -5,8 +5,14 @@ $soc-body-bg-color: white;
 
 //Sidebar
 $soc-sidebar-width: 270px;
+$soc-sidebar-toggler-width: 20px;
+$soc-sidebar-total-width: $soc-sidebar-width + $soc-sidebar-toggler-width;
+
 $soc-sidebar-bg-color: #666;
 $soc-sidebar-color: white;
+$soc-sidebar-toggler-bg-color: #666;
+$soc-sidebar-toggler-color: white;
+
 
 //General
 $soc-spacing-padding-item: 15px;

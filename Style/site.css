@@ -5827,17 +5827,30 @@ body {
   position: fixed;
   left: 0;
   height: 100%;
-  width: 270px;
+  width: 290px;
   z-index: 1000;
   -webkit-transition: all 0.5s ease initial;
   -o-transition: all 0.5s ease initial;
   transition: all 0.5s ease initial; }
+  .soc-page .soc-sidebar .toggler {
+    width: 20px;
+    position: fixed;
+    height: 100%;
+    left: 270px;
+    top: 50px;
+    bottom: 0; }
+    .soc-page .soc-sidebar .toggler button {
+      height: 100%;
+      text-align: center;
+      border: none;
+      color: white;
+      background-color: #666; }
 .soc-page .soc-content {
   -webkit-transition: all 0.5s ease initial;
   -o-transition: all 0.5s ease initial;
   transition: all 0.5s ease initial; }
 .soc-page.has-sidebar {
-  padding-left: 270px;
+  padding-left: 290px;
   -webkit-transition: all 0.5s ease initial;
   -o-transition: all 0.5s ease initial;
   transition: all 0.5s ease initial; }
