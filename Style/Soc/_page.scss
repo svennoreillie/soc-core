@@ -1,0 +1,48 @@
+@import 'variables';
+@import '../Bootstrap/bootstrap/variables';
+@import '../Bootstrap/bootstrap/mixins';
+
+body {
+    background-color: $soc-body-bg-color;
+}
+
+.soc-page {
+    .soc-sidebar {
+        background-color: $soc-sidebar-bg-color;
+        color: $soc-sidebar-color;
+        position: fixed;
+        left: 0;
+        height: 100%;
+        width: $soc-sidebar-width;
+        z-index: 1000;
+        @include transition(all 0.5s ease initial);
+    }
+    .soc-content {
+        @include transition(all 0.5s ease initial);
+    }
+    &.has-sidebar {
+        padding-left: $soc-sidebar-width;
+        @include transition(all 0.5s ease initial);
+        &.closed {
+            padding-left: 0;
+            @include transition(all 0.5s ease initial);
+            .soc-sidebar {
+                display: none;
+            }
+        }
+    }
+    &.has-navbar {
+        margin-top: $navbar-height;
+    }
+    .soc-spacing {
+        padding: $soc-spacing-padding;
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
