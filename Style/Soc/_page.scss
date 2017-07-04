@@ -5,6 +5,10 @@ body {
     background-color: $soc-body-bg-color;
 }
 
+*:focus {
+    outline: none;
+}
+
 .soc-page {
     .soc-sidebar {
         background-color: $soc-sidebar-bg-color;
@@ -15,48 +19,66 @@ body {
         width: $soc-sidebar-total-width;
         z-index: 1000;
         @include transition(all 0.5s ease initial);
+        &.has-toggler {
+            .soc-sidebar-content {
+                padding-left: $soc-sidebar-toggler-width;
+            }
+        }
         .toggler {
             width: $soc-sidebar-toggler-width;
             position: fixed;
             height: 100%;
-            left: $soc-sidebar-width;
-            top: $navbar-height;
             bottom: 0;
+            @include soc-disable-select();
             button {
                 height: 100%;
                 text-align: center;
                 border: none;
                 color: $soc-sidebar-toggler-color;
                 background-color: $soc-sidebar-toggler-bg-color;
+                &:hover {
+                    background-color: lighten($soc-sidebar-toggler-bg-color, 10%);
+                }
             }
+            .hide {
+                display: none;
+            }
+        }
+        .toggler-right {
+            @extend .toggler;
+            left: $soc-sidebar-width;
         }
     }
     .soc-content {
         @include transition(all 0.5s ease initial);
     }
     &.has-sidebar {
-        padding-left: $soc-sidebar-total-width;
+        padding-left: $soc-sidebar-width;
         @include transition(all 0.5s ease initial);
+        &.has-sidebar-toggler {
+            padding-left: $soc-sidebar-total-width;
+        }
         &.closed {
             padding-left: 0;
             @include transition(all 0.5s ease initial);
+            &.has-sidebar-toggler {
+                padding-left: $soc-sidebar-toggler-width;
+            }
             .soc-sidebar {
-                display: none;
+                .soc-sidebar-content {
+                    display: none;
+                }
+                &.has-toggler,
+                &.has-toggler-right {
+                    width: $soc-sidebar-toggler-width;
+                }
+                .toggler-right {
+                    left: 0;
+                }
             }
         }
     }
     &.has-navbar {
         margin-top: $navbar-height;
-    }
-    .soc-spacing {
-        padding: $soc-spacing-padding;
-        .container {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        .container-fluid {
-            padding-left: 0;
-            padding-right: 0;
-        }
     }
 }
