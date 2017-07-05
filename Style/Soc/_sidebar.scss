@@ -7,10 +7,16 @@
         color: $soc-sidebar-color;
         position: fixed;
         left: 0;
-        height: 100%;
+        bottom: 0;
+        top: $navbar-height;
         width: $soc-sidebar-total-width;
         z-index: 1000;
-        @include transition(all 0.5s ease initial);
+        @include soc-transition(width, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
+        .soc-sidebar-content {
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: 100%;
+        }
         &.has-toggler {
             .soc-sidebar-content {
                 padding-left: $soc-sidebar-toggler-width;
@@ -42,42 +48,11 @@
         }
     }
 
-    &.has-sidebar {
-        .soc-content {
-            position: relative;
-            left: $soc-sidebar-width;
-            right: -$soc-sidebar-width;
-        }
-
-        &.closed {
-            .soc-content {
-                left: 0;
-                right: 0;
-            }
-        }
-    }
-
-    &.has-sidebar-toggler {
-        .soc-content {
-            position: relative;
-            left: $soc-sidebar-total-width;
-            right: -$soc-sidebar-total-width;
-        }
-
-        &.closed {
-            .soc-content {
-                left: $soc-sidebar-toggler-width;
-                right: 0;
-            }
-        }
-    }
-
+    /* Sidebar position when closed */
     &.has-sidebar {
         &.closed {
             .soc-sidebar {
-                .soc-sidebar-content {
-                    display: none;
-                }
+                width: 0;
                 &.has-toggler,
                 &.has-toggler-right {
                     width: $soc-sidebar-toggler-width;
@@ -88,4 +63,27 @@
             }
         }
     }
+
+    /* Main content adjustments because of sidebar */
+    &.has-sidebar {
+        .soc-content {
+            left: $soc-sidebar-width;
+        }
+        &.closed {
+            .soc-content {
+                left: 0;
+            }
+        }
+    }
+    &.has-sidebar-toggler {
+        .soc-content {
+            left: $soc-sidebar-total-width;
+        }
+        &.closed {
+            .soc-content {
+                left: $soc-sidebar-toggler-width;
+            }
+        }
+    }
+    
 }

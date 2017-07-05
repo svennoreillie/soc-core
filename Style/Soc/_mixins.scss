@@ -1,9 +1,25 @@
+@import 'variables';
+@import '../Bootstrap/bootstrap/variables';
+@import '../Bootstrap/bootstrap/mixins';
 @mixin soc-disable-select() {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+
+@mixin soc-transition($property: all, $duration: 0s, $function: $soc-transition-general-function, $delay: $soc-transition-general-delay) {
+  @include transition-property($property);
+  @include transition-duration($duration);
+  @include transition-timing-function($function);
+  @include transition-delay($delay);
 }

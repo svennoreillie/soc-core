@@ -1,7 +1,10 @@
 ////////////////////////
 //     Soc specific   //
 ////////////////////////
+
+//General
 $soc-body-bg-color: white;
+
 
 //Sidebar
 $soc-sidebar-width: 270px;
@@ -14,6 +17,17 @@ $soc-sidebar-toggler-bg-color: #808080;
 $soc-sidebar-toggler-color: white;
 
 
+//Transitions
+$soc-transition-general-duration: 0.1s;
+$soc-transition-general-function: cubic-bezier(0.610, -0.535, 0.305, 0.990); //ease-in-out
+$soc-transition-general-delay: 0s;
+//Sidear transitions
+$soc-transition-sidebar-duration: $soc-transition-general-duration;
+$soc-transition-sidebar-function: $soc-transition-general-function;
+$soc-transition-sidebar-delay: $soc-transition-general-delay;
+
+
+
 
 
 /////////////////////////////////
@@ -23,7 +37,7 @@ $soc-sidebar-toggler-color: white;
 // Basics of a navbar
 $navbar-height:                    50px !default;
 $navbar-default-color:             #555 !default;
-$navbar-default-bg:                #ddd !default;
+$navbar-default-bg:                #f8f8f8 !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar toggle

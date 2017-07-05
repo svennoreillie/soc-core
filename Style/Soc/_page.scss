@@ -1,7 +1,6 @@
 @import 'variables';
 @import '../Bootstrap/bootstrap/variables';
 @import '../Bootstrap/bootstrap/mixins';
-
 body {
     background-color: $soc-body-bg-color;
 }
@@ -12,10 +11,17 @@ body {
 
 .soc-page {
     position: relative;
-    
+    .soc-content {
+        position: relative;
+        left: 0;
+        right: 0;
+    }
     &.has-navbar {
         top: $navbar-height;
     }
-    
-    
+    &.has-sidebar {
+        .soc-content {
+            @include soc-transition(left, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
+        }
+    }
 }
