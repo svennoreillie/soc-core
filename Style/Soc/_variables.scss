@@ -11,9 +11,9 @@ $soc-sidebar-width:                     270px;
 $soc-sidebar-toggler-width:             20px;
 $soc-sidebar-total-width:               $soc-sidebar-width + $soc-sidebar-toggler-width;
 
-$soc-sidebar-bg-color:                  #333;
+$soc-sidebar-bg-color:                  #666;//#2a9acd;
 $soc-sidebar-color:                     white;
-$soc-sidebar-toggler-bg-color:          #808080;
+$soc-sidebar-toggler-bg-color:          #286090;//#808080;
 $soc-sidebar-toggler-color:             white;
 
 
@@ -35,8 +35,8 @@ $soc-transition-sidebar-delay:          $soc-transition-general-delay;
 /////////////////////////////////
 
 // Basics of a navbar
-$navbar-height:                    60px;
-$navbar-default-color:             #555;
+$navbar-height:                    50px;
+$navbar-default-color:             #333;
 $navbar-default-bg:                #f8f8f8;
 
 // Navbar toggle
