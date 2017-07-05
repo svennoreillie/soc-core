@@ -9,7 +9,7 @@
         left: 0;
         bottom: 0;
         top: $navbar-height;
-        width: $soc-sidebar-total-width;
+        width: $soc-sidebar-width;
         z-index: 1000;
         @include soc-transition(width, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
         .soc-sidebar-content {
@@ -18,6 +18,7 @@
             height: 100%;
         }
         &.has-toggler {
+            width: $soc-sidebar-total-width;
             .soc-sidebar-content {
                 padding-left: $soc-sidebar-toggler-width;
             }
@@ -68,20 +69,24 @@
     &.has-sidebar {
         .soc-content {
             left: $soc-sidebar-width;
+            margin-right: $soc-sidebar-width;
         }
         &.closed {
             .soc-content {
                 left: 0;
+                margin-right: $soc-sidebar-width;
             }
         }
     }
     &.has-sidebar-toggler {
         .soc-content {
             left: $soc-sidebar-total-width;
+            margin-right: $soc-sidebar-total-width;
         }
         &.closed {
             .soc-content {
                 left: $soc-sidebar-toggler-width;
+                margin-right: $soc-sidebar-toggler-width;
             }
         }
     }

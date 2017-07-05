@@ -21,7 +21,7 @@ body {
     }
     &.has-sidebar {
         .soc-content {
-            @include soc-transition(left, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
+            @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
         }
     }
 }

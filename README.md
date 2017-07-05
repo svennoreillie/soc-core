@@ -16,6 +16,7 @@ Soc is an in-house developed front end framework in order to maintain a similar 
 
 ### Install
 
+* TODO
 1. Change directory to root of project
 2. Run 'npm install soc-core --save' in your terminal
 3. Include 'soc-core.css' in your website
@@ -25,6 +26,7 @@ Soc is an in-house developed front end framework in order to maintain a similar 
 
 * Fork this repo
 * Add or change styles
+* Include example page
 * Update the docs
 * Create a pull request
 
