@@ -1,6 +1,7 @@
 @import 'variables';
 @import '../Bootstrap/bootstrap/variables';
 @import '../Bootstrap/bootstrap/mixins';
+
 body {
     background-color: $soc-body-bg-color;
 }
@@ -10,75 +11,11 @@ body {
 }
 
 .soc-page {
-    .soc-sidebar {
-        background-color: $soc-sidebar-bg-color;
-        color: $soc-sidebar-color;
-        position: fixed;
-        left: 0;
-        height: 100%;
-        width: $soc-sidebar-total-width;
-        z-index: 1000;
-        @include transition(all 0.5s ease initial);
-        &.has-toggler {
-            .soc-sidebar-content {
-                padding-left: $soc-sidebar-toggler-width;
-            }
-        }
-        .toggler {
-            width: $soc-sidebar-toggler-width;
-            position: fixed;
-            height: 100%;
-            bottom: 0;
-            @include soc-disable-select();
-            button {
-                height: 100%;
-                text-align: center;
-                border: none;
-                color: $soc-sidebar-toggler-color;
-                background-color: $soc-sidebar-toggler-bg-color;
-                &:hover {
-                    background-color: lighten($soc-sidebar-toggler-bg-color, 10%);
-                }
-            }
-            .hide {
-                display: none;
-            }
-        }
-        .toggler-right {
-            @extend .toggler;
-            left: $soc-sidebar-width;
-        }
-    }
-    .soc-content {
-        @include transition(all 0.5s ease initial);
-    }
-    &.has-sidebar {
-        padding-left: $soc-sidebar-width;
-        @include transition(all 0.5s ease initial);
-        &.has-sidebar-toggler {
-            padding-left: $soc-sidebar-total-width;
-        }
-        &.closed {
-            padding-left: 0;
-            @include transition(all 0.5s ease initial);
-            &.has-sidebar-toggler {
-                padding-left: $soc-sidebar-toggler-width;
-            }
-            .soc-sidebar {
-                .soc-sidebar-content {
-                    display: none;
-                }
-                &.has-toggler,
-                &.has-toggler-right {
-                    width: $soc-sidebar-toggler-width;
-                }
-                .toggler-right {
-                    left: 0;
-                }
-            }
-        }
-    }
+    position: relative;
+    
     &.has-navbar {
-        margin-top: $navbar-height;
+        top: $navbar-height;
     }
+    
+    
 }
