@@ -1,0 +1,104 @@
+@import 'variables';
+@import '../Bootstrap/bootstrap/variables';
+@import '../Bootstrap/bootstrap/mixins';
+.soc-page {
+    .navbar {
+        .toggler-navbar {
+            float: left;
+            position: relative;
+            padding: 3px 10px 0px 10px;
+            @include navbar-vertical-align(34px);
+            background-color: transparent;
+            background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+            border: none;
+            color: #858585;
+        }
+    }
+    .soc-sidebar {
+        &.has-toggler-right {
+            width: $soc-sidebar-width;
+        }
+        &.has-toggler-left {
+            width: $soc-sidebar-total-width;
+            .soc-sidebar-content {
+                padding-left: $soc-sidebar-toggler-width;
+            }
+        }
+        .toggler-base {
+            width: $soc-sidebar-toggler-width;
+            position: fixed;
+            @include soc-disable-select();
+            @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
+            button {
+                height: 100%;
+                text-align: center;
+                border: none;
+                color: $soc-sidebar-toggler-color;
+                background-color: $soc-sidebar-toggler-bg-color;
+                &:hover {
+                    background-color: lighten($soc-sidebar-toggler-bg-color, 10%);
+                }
+            }
+            .hide {
+                display: none;
+            }
+        }
+        .toggler-flyout {
+            @extend .toggler-base;
+            top: 50px;
+            left: $soc-sidebar-width;
+        }
+        .toggler-left {
+            @extend .toggler-base;
+            height: 100%;
+            bottom: 0;
+        }
+        .toggler-right {
+            @extend .toggler-left;
+            left: $soc-sidebar-width;
+        }
+    }
+    /* Sidebar position when closed */
+    &.has-sidebar {
+        &.closed {
+            .soc-sidebar {
+                &.has-toggler-flyout {
+                    width: 0;
+                }
+                &.has-toggler-left,
+                &.has-toggler-right {
+                    width: $soc-sidebar-toggler-width;
+                }
+                .toggler-right,
+                .toggler-flyout {
+                    left: 0;
+                }
+            }
+        }
+    }
+    &.has-sidebar-toggler {
+        .soc-content {
+            left: $soc-sidebar-width;
+            margin-right: $soc-sidebar-width;
+        }
+        &.closed {
+            .soc-content {
+                left: $soc-sidebar-width;
+                margin-right: $soc-sidebar-width;
+            }
+        }
+    }
+    &.has-sidebar-toggler-left,
+    &.has-sidebar-toggler-right {
+        .soc-content {
+            left: $soc-sidebar-total-width;
+            margin-right: $soc-sidebar-total-width;
+        }
+        &.closed {
+            .soc-content {
+                left: $soc-sidebar-toggler-width;
+                margin-right: $soc-sidebar-toggler-width;
+            }
+        }
+    }
+}
