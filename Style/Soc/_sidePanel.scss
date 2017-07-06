@@ -1,6 +1,6 @@
 @import 'variables';
-@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
-@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
 .soc-sidepanel-fixed {
   @media (max-width: $grid-float-breakpoint) {
     margin-left: -15px;
