@@ -26,9 +26,14 @@ Soc is an in-house developed front end framework in order to maintain a similar 
 
 
 ## Using the project
+Run the built in dev server by running 'npm start' in a terminal window.
+After this you can navigate to 'http://localhost:8080' to look through the example website. When contributing, you can navigate to 'http://localhost:8080/webpack-dev-server/index.html' to have live browser updates enabled while altering the project.
+
 * TODO => define the here part
+
 Documentation of the various components can be found here. Example sites are located in the Examples folder of this project. 
 Soc-core is created using Visual Studio Code and it is recommended you use this IDE when contributing to the project.
+
 * TODO => webpack tasks
 * TODO => 
 
