@@ -1,0 +1,12 @@
+//Set our own variables first, these can override the bootstrap variables
+@import "soc/variables";
+@import "soc/mixins";
+
+//import bootstrap, font awesome, ...
+@import "soc/prerequisites";
+
+//Soc Styles
+@import "soc/overrides";
+@import "soc/page";
+@import "soc/sidebar";
+@import "soc/togglers";
