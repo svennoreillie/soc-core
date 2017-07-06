@@ -1,0 +1,33 @@
+{
+  "name": "soc-core",
+  "version": "0.1.0",
+  "description": "Core sass framework based on Bootstrap",
+  "main": "Style/site.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svennoreillie/soc-core.git"
+  },
+  "keywords": [
+    "Soc",
+    "Mut",
+    "Sass",
+    "CSS",
+    "Style",
+    "Core",
+    "Styling",
+    "Bootstrap",
+    "Base"
+  ],
+  "author": "Sven Noreillie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svennoreillie/soc-core/issues"
+  },
+  "homepage": "https://github.com/svennoreillie/soc-core#readme",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
