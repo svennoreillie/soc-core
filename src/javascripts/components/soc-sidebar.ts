@@ -1,8 +1,11 @@
-import $ = require("jquery")
+import $ = require("jquery");
 
-export default class SideBar {
-    constructor(private doc: HTMLDocument) {
-        doc.onload = this.sideToggler;
+class SideBar {
+    constructor() {
+        $(document).ready(
+            () => {
+                this.sideToggler();
+            }); 
     }
 
     private sideToggler() {
@@ -13,3 +16,5 @@ export default class SideBar {
         });
     }
 }
+
+export = SideBar;

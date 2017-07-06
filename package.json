@@ -32,6 +32,7 @@
   "devDependencies": {
     "@types/jquery": "^3.2.6",
     "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1",
     "node-sass": "^4.5.3",
     "ts-loader": "^2.2.2",
     "typescript": "^2.4.1",

@@ -1,21 +1,27 @@
+var path = require('path');
+
 module.exports = {
-    entry: "./assets/javascripts/soc-core.ts",
-    output: {
-        filename: "dist/soc-core.js",
-        path: __dirname
-    },
-    devtool: 'inline-source-map',
+    context: path.resolve('src'),
+    entry: './javascripts/soc-core.ts',
     module: {
-        rules: [
-            {
-                test: /\.tsx$/,
-                use: "ts-loader",
-                exclude: /node_modules/
-            }
-        ]
+        rules: [{
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            exclude: /node_modules/
+        }]
     },
-    resolve: {
+    devtool: 'source-map',
+    resolve: { 
         extensions: [".tsx", ".ts", ".js", ".json"]
     },
+    output: {
+        filename: 'soc-core.js',
+        sourceMapFilename: '[file].map',
+        path: path.resolve('build/js/'),
+        publicPath: '/public/assets/js/'
+    },
+    devServer: {
+        contentBase: 'public'
+    },
     watch: false
-}
+};
