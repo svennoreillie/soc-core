@@ -1,27 +1,45 @@
 var path = require('path');
+var webpack = require('webpack');
+var extractText = require('extract-text-webpack-plugin');
 
 module.exports = {
-    context: path.resolve('src'),
-    entry: './javascripts/soc-core.ts',
+    entry: {
+        app: './src/javascripts/soc-core',
+        vendor: './src/javascripts/vendor',
+        css: './src/stylesheets/soc.scss'
+    },
+
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].bundle.js'
+    },
+
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'shared'
+        }),
+        new extractText({
+            filename: 'style.css',
+            disable: false,
+            allChunks: true
+        }),
+        new webpack.ProvidePlugin({
+           $: "jquery",
+           jQuery: "jquery"
+       })
+    ],
+
+    devtool: 'source-map',
+    devServer: {
+        contentBase: 'dist'
+    },
+
     module: {
-        rules: [{
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: /node_modules/
+        loaders: [{
+            test: /\.scss$/,
+            loader: extractText.extract('css-loader!sass-loader')
         }]
     },
-    devtool: 'source-map',
-    resolve: { 
-        extensions: [".tsx", ".ts", ".js", ".json"]
-    },
-    output: {
-        filename: 'soc-core.js',
-        sourceMapFilename: '[file].map',
-        path: path.resolve('build/js/'),
-        publicPath: '/public/assets/js/'
-    },
-    devServer: {
-        contentBase: 'public'
-    },
+
     watch: false
 };

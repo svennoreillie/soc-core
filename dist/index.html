@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <title>Soc-core Example</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="../assets/stylesheets/soc.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
-  <script src="../assets/javascripts/soc.js"></script>
+  <!--<script src="../node_modules/bootstrap-sass/src/javascripts/bootstrap.min.js"></script>-->
+  <link rel="stylesheet" href="style.css">
+  <script src="shared.bundle.js"></script>
+  <script src="vendor.bundle.js"></script>
+  <script src="app.bundle.js"></script>
 </head>
 
 <body>
@@ -22,6 +22,13 @@
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
+
+            <!-- Sidebar toggler -->
+            <button type="button" class="toggler-navbar" id="soc-sidebar-toggler">
+                <i class="fa fa-angle-double-left fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-angle-double-right fa-2x hide" aria-hidden="true"></i>
+            </button>
+
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
               aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -90,14 +97,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Sidebar toggler -->
-      <div class="toggler-flyout">
-        <button id="soc-sidebar-toggler">
-          <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-          <i class="fa fa-angle-double-right hide" aria-hidden="true"></i>
-        </button>
       </div>
     </div>
 
