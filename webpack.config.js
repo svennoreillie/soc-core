@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var extractText = require('extract-text-webpack-plugin');
+var copyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -24,9 +25,12 @@ module.exports = {
             allChunks: true
         }),
         new webpack.ProvidePlugin({
-           $: "jquery",
-           jQuery: "jquery"
-       })
+            $: "jquery",
+            jQuery: "jquery"
+        }),
+        new copyPlugin([
+            { from: 'src/html'}
+        ])
     ],
 
     devtool: 'source-map',
