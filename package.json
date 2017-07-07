@@ -4,8 +4,10 @@
   "description": "Core sass framework based on Bootstrap",
   "main": "assets/stylesheets/soc.css",
   "scripts": {
-    "start": "webpack-dev-server --progress --inline --open",
-    "build": "webpack --progress"
+    "start": "webpack-dev-server --watch --progress --inline",
+    "build": "webpack --progress",
+    "demobuild": "webpack --progress",
+    "demostart": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
