@@ -8,11 +8,6 @@ This is a sass framework providing styling for base elements of Soc style.
 Soc is an in-house developed front end framework in order to maintain a similar look and feel for all kinds of administrative websites.
 
 
-## Quick Look
-Open up a terminal at a desired empty folder, make sure you have sufficient administrator rights. 
-Run 'git clone'
-
-
 ## Setup
 ### Installing prerequisites
 * Git installed 
