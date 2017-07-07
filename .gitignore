@@ -1,3 +1,10 @@
-.sass-cache/
+# npm ignored
 node_modules/*
+
+# dist is created using webpack command
+dist/*
+
+# Using Sass => compiled css can be ignored
+*.css
 *.css.map
+.sass-cache/
