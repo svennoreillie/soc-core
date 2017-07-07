@@ -4,7 +4,7 @@
   "description": "Core sass framework based on Bootstrap",
   "main": "assets/stylesheets/soc.css",
   "scripts": {
-    "start": "webpack-dev-server --watch --progress --inline",
+    "start": "webpack-dev-server --watch --progress --inline --open",
     "build": "webpack --progress"
   },
   "repository": {
