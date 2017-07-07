@@ -5,9 +5,7 @@
   "main": "assets/stylesheets/soc.css",
   "scripts": {
     "start": "webpack-dev-server --watch --progress --inline",
-    "build": "webpack --progress",
-    "demobuild": "webpack --progress",
-    "demostart": "webpack-dev-server"
+    "build": "webpack --progress"
   },
   "repository": {
     "type": "git",

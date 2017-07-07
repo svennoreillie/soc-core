@@ -7,22 +7,18 @@ echo --        Installing npm packages         --
 echo --------------------------------------------
 echo. 
 call npm install
+cls
 echo. 
 echo --------------------------------------------
 echo --             Running webpack            --
 echo --------------------------------------------
 echo. 
-call npm run demobuild 
+call npm run build 
+cls
 echo. 
 echo --------------------------------------------
 echo --             Starting server            --
 echo --------------------------------------------
 echo. 
-call npm run demostart
-echo. 
-echo --------------------------------------------
-echo --             Opening website            --
-echo --------------------------------------------
-echo. 
-start chrome.exe localhost:8080
+call npm start
 :end
