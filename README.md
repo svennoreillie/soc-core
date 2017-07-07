@@ -18,9 +18,9 @@ Soc is an in-house developed front end framework in order to maintain a similar 
 
 ### Quick Look
 Open up a terminal at a desired empty folder, make sure you have sufficient administrator rights. 
-Run 'git clone https://github.com/svennoreillie/soc-core.git'
-cd into the soc-core project
-Run 'demo'
+* Run 'git clone https://github.com/svennoreillie/soc-core.git'
+* cd into the soc-core project
+* Run 'demo'
 
 ### Install project
 1. Change directory to root of project in a terminal
