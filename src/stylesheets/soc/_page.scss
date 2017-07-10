@@ -36,5 +36,17 @@ body {
             @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
         }
     }
-    
+}
+
+.soc-appversion {
+    z-index: 5000;
+    position: absolute;
+    float: right;
+    top: 1px;
+    right: 5px;
+    font-size: xx-small;
+    color: black;
+    &::before {
+        content: "v.";
+    }
 }
