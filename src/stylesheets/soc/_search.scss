@@ -1,9 +1,7 @@
+@import "variables";
+
 .soc-searchresult {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
+    width: $soc-sidebar-width;
     height: $soc-searchresult-height;
     background-color: grey;
     padding: 3px;
@@ -18,5 +16,11 @@
 .soc-sidebar.has-actionbar {
     .soc-searchresult {
         bottom: $soc-actionbar-height;
+        width: inherit;
+        
     }
+}
+
+.soc-search {
+    width: $soc-sidebar-width;
 }
