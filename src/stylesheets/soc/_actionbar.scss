@@ -1,0 +1,63 @@
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
+.soc-actionbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    height: $soc-actionbar-height;
+    background-color: $soc-actionbar-bg-color;
+    color: $soc-actionbar-color;
+    text-align: center;
+    width: 100%;
+    @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
+    .soc-actionbutton {        
+        @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
+        @extend .btn;
+        margin: 0 10px;
+        border-width: 0;
+        padding: 1px 0;
+        height: $soc-actionbar-height;
+        background-color: $soc-actionbar-bg-color;
+        color: $soc-actionbar-color;
+        font-size: $font-size-medium;
+        i {
+            font-size: $font-size-large + 10;
+        }
+    }
+}
+
+.soc-main {
+    .soc-actionbar {
+        border-left: white solid 1px;
+    }
+}
+
+.soc-page {
+    &.closed {
+        .soc-main {
+            .soc-actionbar {
+                border-left: none;
+            }
+        }
+    }
+}
+
+.soc-sidebar {
+    &.has-actionbar {
+        .soc-sidebar-content {
+            bottom: $soc-actionbar-height;
+        }
+    }
+}
+
+.soc-page.closed {
+    .soc-sidebar {
+        .soc-actionbar {
+            width: 0;
+            .soc-actionbutton {
+                display: none;
+            }
+        }
+    }
+}

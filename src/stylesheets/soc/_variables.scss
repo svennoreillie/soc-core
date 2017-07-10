@@ -1,30 +1,52 @@
+// SETTING DEFAULT VARIABLES IN CASE NO TEMPLATE HAS BEEN SET
+$soc-base-color: white !default;
+$soc-base-text-color: black !default;
+$soc-navigation-color: #f8f8f8 !default;
+$soc-navigation-text-color: #333 !default;
+$soc-secondary-color: #333 !default;
+$soc-secondary-text-color: white !default;
+$soc-accent-color: #4FAFDB !default;
+$soc-accent-text-color: white !default;
+
+$soc-sidebar-width: 300px !default;
+$soc-actionbar-height: 55px !default;
+$soc-navbar-height: 50px !default;
+
+$soc-transition-timing-multiplier: 2 !default;
+
+
 ////////////////////////
 //     Soc specific   //
 ////////////////////////
 
 //General
-$soc-body-bg-color:         white;
-
+$soc-body-bg-color:         $soc-base-color;
+$soc-body-color:            $soc-base-text-color;
 
 //Sidebar
-$soc-sidebar-width:                     300px;
-$soc-sidebar-toggler-width:             20px;
-$soc-sidebar-total-width:               $soc-sidebar-width + $soc-sidebar-toggler-width;
+$soc-sidebar-width:                     $soc-sidebar-width  !default;
+$soc-sidebar-toggler-width:             20px  !default;
+$soc-sidebar-total-width:               $soc-sidebar-width + $soc-sidebar-toggler-width !default;
 
-$soc-sidebar-bg-color:                  #666;//#2a9acd;
-$soc-sidebar-color:                     white;
-$soc-sidebar-toggler-bg-color:          #286090;//#808080;
-$soc-sidebar-toggler-color:             white;
+$soc-sidebar-bg-color:                  $soc-secondary-color !default;//#2a9acd !default;
+$soc-sidebar-color:                     $soc-secondary-text-color !default;
+$soc-sidebar-toggler-bg-color:          $soc-accent-color !default;//#808080 !default;
+$soc-sidebar-toggler-color:             $soc-accent-text-color !default;
 
+//Actionbar
+$soc-actionbar-bg-color:            $soc-accent-color;
+$soc-actionbar-color:               $soc-accent-text-color;
+$soc-actionbar-height:              $soc-actionbar-height;
 
 //Transitions
-$soc-transition-general-duration:       0.2s;
-$soc-transition-general-function:       cubic-bezier(0.610, -0.535, 0.305, 0.990); //ease-in-out
-$soc-transition-general-delay:          0s;
+$soc-transition-timing-multiplier:      0 !default;
+$soc-transition-general-duration:       $soc-transition-timing-multiplier * 0.1s !default;
+$soc-transition-general-function:       cubic-bezier(0.610, -0.535, 0.305, 0.990) !default; //ease-in-out
+$soc-transition-general-delay:          0s !default;
 //Sidebar transitions
-$soc-transition-sidebar-duration:       $soc-transition-general-duration;
-$soc-transition-sidebar-function:       $soc-transition-general-function;
-$soc-transition-sidebar-delay:          $soc-transition-general-delay;
+$soc-transition-sidebar-duration:       $soc-transition-general-duration !default;
+$soc-transition-sidebar-function:       $soc-transition-general-function !default;
+$soc-transition-sidebar-delay:          $soc-transition-general-delay !default;
 
 
 
@@ -35,27 +57,28 @@ $soc-transition-sidebar-delay:          $soc-transition-general-delay;
 /////////////////////////////////
 
 // Fonts
-$font-size-large:           22px;
+$font-size-large:           22px !default;
+$font-size-medium:          16px !default;
 
 // Basics of a navbar
-$navbar-height:                    50px;
-$navbar-default-color:             #333;
-$navbar-default-bg:                #f8f8f8;
+$navbar-height:                    $soc-navbar-height !default;
+$navbar-default-color:             $soc-navigation-text-color !default;
+$navbar-default-bg:                $soc-navigation-color !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           #ddd;
-$navbar-default-toggle-icon-bar-bg:        #888;
+$navbar-default-toggle-hover-bg:           #ddd !default;
+$navbar-default-toggle-icon-bar-bg:        #888 !default;
 
 // Navbar links
-$navbar-default-link-color:                $navbar-default-color;
-$navbar-default-link-hover-color:          black;
-$navbar-default-link-hover-bg:             lighten($navbar-default-bg, 6.5%);
-$navbar-default-link-active-color:         darken($navbar-default-color, 6.5%);
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%);
-$navbar-default-link-disabled-color:       #ccc;
-$navbar-default-link-disabled-bg:          transparent;
+$navbar-default-link-color:                $navbar-default-color !default;
+$navbar-default-link-hover-color:          black !default;
+$navbar-default-link-hover-bg:             lighten($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-active-color:         darken($navbar-default-color, 6.5%) !default;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
-$navbar-default-brand-color:               $navbar-default-link-color;
-$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%);
-$navbar-default-brand-hover-bg:            transparent;
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-bg:            transparent !default;

@@ -2,6 +2,7 @@
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
 body {
     background-color: $soc-body-bg-color;
+    color: $soc-body-color;
 }
 
 *:focus {
@@ -10,17 +11,30 @@ body {
 
 .soc-page {
     position: relative;
-    .soc-content {
-        position: relative;
+    .soc-main {
+        position: fixed;
         left: 0;
         right: 0;
+        top: 0;
+        bottom:0;
+        .soc-main-content {
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: absolute;
+            bottom: 0;
+            top: 0;
+        }
     }
     &.has-navbar {
         top: $navbar-height;
+        .soc-main {
+            top: $navbar-height;
+        }
     }
     &.has-sidebar {
-        .soc-content {
+        .soc-main {
             @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
         }
     }
+    
 }

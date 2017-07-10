@@ -13,9 +13,13 @@
         z-index: 1000;
         @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
         .soc-sidebar-content {
+            @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
             overflow-y: auto;
             overflow-x: hidden;
-            height: 100%;
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            width: 100%;
         }
     }
     /* Sidebar position when closed */
@@ -23,19 +27,20 @@
         &.closed {
             .soc-sidebar {
                 width: 0;
+                .soc-sidebar-content {
+                    width: 0;
+                }
             }
         }
     }
     /* Main content adjustments because of sidebar */
     &.has-sidebar {
-        .soc-content {
+        .soc-main {
             left: $soc-sidebar-width;
-            margin-right: $soc-sidebar-width;
         }
         &.closed {
-            .soc-content {
+            .soc-main {
                 left: 0;
-                margin-right: 0;
             }
         }
     }

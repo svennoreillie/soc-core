@@ -77,27 +77,27 @@
         }
     }
     &.has-sidebar-toggler {
-        .soc-content {
+        .soc-main {
             left: $soc-sidebar-width;
-            margin-right: $soc-sidebar-width;
+            margin-right: 0;
         }
         &.closed {
-            .soc-content {
+            .soc-main {
                 left: $soc-sidebar-width;
-                margin-right: $soc-sidebar-width;
+                margin-right: 0;
             }
         }
     }
     &.has-sidebar-toggler-left,
     &.has-sidebar-toggler-right {
-        .soc-content {
+        .soc-main {
             left: $soc-sidebar-total-width;
-            margin-right: $soc-sidebar-total-width;
+            margin-right: 0;
         }
         &.closed {
-            .soc-content {
+            .soc-main {
                 left: $soc-sidebar-toggler-width;
-                margin-right: $soc-sidebar-toggler-width;
+                margin-right: 0;
             }
         }
     }
