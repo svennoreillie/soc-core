@@ -1,0 +1,22 @@
+.soc-searchresult {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: $soc-searchresult-height;
+    background-color: grey;
+    padding: 3px;
+    text-align: center;
+    @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
+    .badge {
+        background-color: $soc-accent-color;
+        @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
+    }
+}
+
+.soc-sidebar.has-actionbar {
+    .soc-searchresult {
+        bottom: $soc-actionbar-height;
+    }
+}

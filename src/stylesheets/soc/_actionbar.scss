@@ -43,21 +43,10 @@
     }
 }
 
-.soc-sidebar {
+.soc-main {
     &.has-actionbar {
-        .soc-sidebar-content {
+        .soc-main-content {
             bottom: $soc-actionbar-height;
-        }
-    }
-}
-
-.soc-page.closed {
-    .soc-sidebar {
-        .soc-actionbar {
-            width: 0;
-            .soc-actionbutton {
-                display: none;
-            }
         }
     }
 }

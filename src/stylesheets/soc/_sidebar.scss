@@ -21,6 +21,21 @@
             top: 0;
             width: 100%;
         }
+        &.has-searchresult {
+            .soc-sidebar-content {
+                bottom: $soc-searchresult-height;
+            }
+        }
+        &.has-actionbar {
+            .soc-sidebar-content {
+                bottom: $soc-actionbar-height;
+            }
+        }
+        &.has-searchresult.has-actionbar {
+            .soc-sidebar-content {
+                bottom: $soc-actionbar-height + $soc-searchresult-height;
+            }
+        }
     }
     /* Sidebar position when closed */
     &.has-sidebar {
@@ -29,6 +44,16 @@
                 width: 0;
                 .soc-sidebar-content {
                     width: 0;
+                }
+                .soc-actionbutton {
+                    display: none;
+                }
+                .soc-searchresult {
+                    width: 0;
+                    padding: 0;
+                    .badge {
+                        display: none
+                    }
                 }
             }
         }
