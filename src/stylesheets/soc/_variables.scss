@@ -59,7 +59,7 @@ $soc-searchresult-height:       27px;
 //Actionbar
 $soc-actionbar-bg-color:            $soc-accent-color;
 $soc-actionbar-color:               $soc-accent-text-color;
-$soc-actionbar-height:              55px;
+$soc-actionbar-height:              55px !default;
 
 //Transitions
 $soc-transition-timing-multiplier:      0 !default;

@@ -7,7 +7,10 @@ $soc-secondary-text-color: white;
 $soc-accent-color: #519595;
 $soc-accent-text-color: white;
 
-$soc-color-1:		rgba(35, 31, 32, 1);
+
+//Check for color schemes @ https://coolors.co
+//Example: https://coolors.co/fc4700-fcde00-cbf276-18b4ba-18827c
+$soc-color-1:		rgba(67, 37, 52, 1);
 $soc-color-2:		rgba(187, 68, 48, 1);
 $soc-color-3:		rgba(126, 189, 194, 1);
 $soc-color-4:		rgba(243, 223, 162, 1);
@@ -16,10 +19,10 @@ $soc-color-6:		rgba(4, 21, 31, 1);
 $soc-color-7:		rgba(24, 58, 55, 1);
 $soc-color-8:		rgba(239, 214, 172, 1);
 $soc-color-9:		rgba(196, 73, 0, 1);
-$soc-color-10:		rgba(67, 37, 52, 1);
+$soc-color-10:		rgba(35, 31, 32, 1);
 
 $soc-sidebar-width: 320px;
-$soc-actionbar-height: 75px;
+$soc-actionbar-height: 65px;
 $soc-navbar-height: 50px;
 
 $soc-transition-timing-multiplier: 4;

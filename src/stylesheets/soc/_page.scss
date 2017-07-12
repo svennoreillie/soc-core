@@ -20,9 +20,10 @@ body {
         .soc-main-content {
             overflow-y: auto;
             overflow-x: hidden;
+            text-align: justify;
             position: absolute;
-            bottom: 0;
             top: 0;
+            width:100%;
         }
     }
     &.has-navbar {

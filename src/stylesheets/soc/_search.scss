@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixins";
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
+
 .soc-sidebar {
     .soc-searchresult {
         width: $soc-sidebar-width;
@@ -22,7 +23,23 @@
     }
 }
 
-.soc-search-filterbar {
+
+
+.soc-search {
+    width: $soc-sidebar-width;
+    background-color: $soc-base-color;
+    color: $soc-base-text-color;
+
+    .soc-search-form {
+        padding-top: 10px;
+    }
+
+    .soc-search-button {
+        @extend .btn-primary;
+        width: $soc-sidebar-width;
+    }
+
+    .soc-search-filterbar {
     display: flex;
     width: $soc-sidebar-width;
     height: 40px;
@@ -41,19 +58,18 @@
     $color-filter-9,
     $color-filter-10 {
         .filter#{$i} {
-            background-color:#{$color};
+            background-color:$color;
             color: calculate-text-color($color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: small;
+
+           &:hover {
+             background-color: darken($color, 15%);
+           }
         }
         $i: $i+1;
     }
 }
-
-.soc-search {
-    width: $soc-sidebar-width;
-    background-color: $soc-base-color;
-    color: $soc-base-text-color;
-    .soc-search-button {
-        @extend .btn-primary;
-        width: $soc-sidebar-width;
-    }
 }
