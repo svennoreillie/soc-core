@@ -20,7 +20,7 @@ module.exports = {
             name: 'shared'
         }),
         new extractText({
-            filename: 'style.css',
+            filename: 'soc-core.css',
             disable: false,
             allChunks: true
         }),

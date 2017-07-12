@@ -1,0 +1,19 @@
+# npm ignored
+node_modules/*
+
+# vs code
+.vscode/*
+
+# dist is created using webpack command
+dist/*
+!dist/soc-core.css
+!dist/app.bundler.js
+!dist/vendor.bundler.js
+!dist/shared.bundler.js
+!dist/css.bundler.js
+
+# Using Sass => compiled css can be ignored
+*.css.map
+.sass-cache/
+*.bat
+

@@ -1,23 +1,23 @@
 import $ from 'jquery';
 
 $(document).ready(function () {
+
+    function init() {
+        setActiveLinks();
+    }
+
     //Loading navigation content 
     $("#navbarContent").load("elements/navigation.html", navbarCompleted);
-    $("#sidebarContent").load("elements/sidebar.html");
+    $("#sidebarContent").load("elements/sidebar.html", sidebarCompleted);
     $("#typographyContent").load("elements/typography.html");
     $("#gridContent").load("elements/grid.html");
     $("#bootstrapComponentContent").load("elements/components_bootstrap.html");
 
-
-    $(".soc-search-button").click(function (event) {
-        event.preventDefault();
-        $(".soc-search-form").toggle("fast");
-    });
-
-
+    //Url changes
     $(window).on('hashchange', setActiveLinks);
 
 
+    //Privates
     function setActiveLinks() {
         //remove all actives
         $(".navbar a").parent("li").removeClass("active");
@@ -35,10 +35,13 @@ $(document).ready(function () {
         });
     }
 
-    init();
-
-    function init() {
-        setActiveLinks();
+    function sidebarCompleted() {
+        $(".soc-search-button").click(function (event) {
+            event.preventDefault();
+            $(".soc-search-form").toggle("fast");
+        });
     }
+
+    init();
 
 });
