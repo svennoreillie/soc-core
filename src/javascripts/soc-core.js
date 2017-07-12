@@ -4,6 +4,10 @@ $(document).ready(function () {
     //Loading navigation content 
     $("#navbarContent").load("elements/navigation.html", navbarCompleted);
     $("#maincontent").load("elements/maincontent.html");
+    $(".soc-search-button").click(function (event) {
+        event.preventDefault();
+        $(".soc-search-form").toggle("fast");
+    });
 
     function navbarCompleted() {
         //Set actions on sidebar toggler

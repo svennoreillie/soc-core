@@ -1,4 +1,4 @@
- body {
+body {
     overflow-x: hidden;
  }
 
@@ -11,4 +11,8 @@
 
  .navbar-user {
      cursor: default;
+ }
+
+ .btn {
+    border-radius: 0px !important;
  }

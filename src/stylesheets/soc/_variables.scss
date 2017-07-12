@@ -1,17 +1,16 @@
 // SETTING DEFAULT VARIABLES IN CASE NO TEMPLATE HAS BEEN SET
-$soc-base-color: white !default;
-$soc-base-text-color: black !default;
-$soc-navigation-color: #f8f8f8 !default;
-$soc-navigation-text-color: #333 !default;
-$soc-secondary-color: #333 !default;
-$soc-secondary-text-color: white !default;
-$soc-accent-color: #4FAFDB !default;
-$soc-accent-text-color: white !default;
+$soc-color-1:		#EFBC9B !default;
+$soc-color-2:		#725456 !default;
+$soc-color-3:		#36213E !default;
+$soc-color-4:		#554971 !default;
+$soc-color-5:		#63768D !default;
+$soc-color-6:		rgba(35, 31, 32, 1);
+$soc-color-7:		rgba(187, 68, 48, 1);
+$soc-color-8:		rgba(126, 189, 194, 1);
+$soc-color-9:		rgba(243, 223, 162, 1);
+$soc-color-10:		rgba(239, 230, 221, 1);
 
-$soc-sidebar-width: 300px !default;
-$soc-actionbar-height: 55px !default;
 $soc-navbar-height: 50px !default;
-
 $soc-transition-timing-multiplier: 2 !default;
 
 
@@ -19,12 +18,33 @@ $soc-transition-timing-multiplier: 2 !default;
 //     Soc specific   //
 ////////////////////////
 
+//Colors
+$soc-base-color:                white !default;
+$soc-base-text-color:           black !default;
+$soc-navigation-color:          #f8f8f8 !default;
+$soc-navigation-text-color:     #333 !default;
+$soc-secondary-color:           #333 !default;
+$soc-secondary-text-color:      white !default;
+$soc-accent-color:              #4FAFDB !default;
+$soc-accent-text-color:         white !default;
+
+$color-filter-1:		$soc-color-1;
+$color-filter-2:		$soc-color-2;
+$color-filter-3:		$soc-color-3;
+$color-filter-4:		$soc-color-4;
+$color-filter-5:		$soc-color-5;
+$color-filter-6:		$soc-color-6;
+$color-filter-7:		$soc-color-7;
+$color-filter-8:		$soc-color-8;
+$color-filter-9:		$soc-color-9;
+$color-filter-10:		$soc-color-10;	
+
 //General
 $soc-body-bg-color:         $soc-base-color;
 $soc-body-color:            $soc-base-text-color;
 
 //Sidebar
-$soc-sidebar-width:                     $soc-sidebar-width  !default;
+$soc-sidebar-width:                     300px  !default;
 $soc-sidebar-toggler-width:             20px  !default;
 $soc-sidebar-total-width:               $soc-sidebar-width + $soc-sidebar-toggler-width !default;
 
@@ -39,7 +59,7 @@ $soc-searchresult-height:       27px;
 //Actionbar
 $soc-actionbar-bg-color:            $soc-accent-color;
 $soc-actionbar-color:               $soc-accent-text-color;
-$soc-actionbar-height:              $soc-actionbar-height;
+$soc-actionbar-height:              55px;
 
 //Transitions
 $soc-transition-timing-multiplier:      0 !default;
@@ -60,8 +80,9 @@ $soc-transition-sidebar-delay:          $soc-transition-general-delay !default;
 /////////////////////////////////
 
 // Fonts
-$font-size-large:           22px !default;
-$font-size-medium:          16px !default;
+$font-family-sans-serif:        "Frutiger", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-size-large:               22px !default;
+$font-size-medium:              16px !default;
 
 // Basics of a navbar
 $navbar-height:                    $soc-navbar-height !default;

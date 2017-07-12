@@ -1,26 +1,59 @@
 @import "variables";
-
-.soc-searchresult {
-    width: $soc-sidebar-width;
-    height: $soc-searchresult-height;
-    background-color: grey;
-    padding: 3px;
-    text-align: center;
-    @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
-    .badge {
-        background-color: $soc-accent-color;
+@import "mixins";
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
+.soc-sidebar {
+    .soc-searchresult {
+        width: $soc-sidebar-width;
+        height: $soc-searchresult-height;
+        background-color: grey;
+        padding: 3px;
+        text-align: center;
         @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
+        .badge {
+            background-color: $soc-accent-color;
+            @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
+        }
+    }
+    &.has-actionbar {
+        .soc-searchresult {
+            bottom: $soc-actionbar-height;
+            width: inherit;
+        }
     }
 }
 
-.soc-sidebar.has-actionbar {
-    .soc-searchresult {
-        bottom: $soc-actionbar-height;
-        width: inherit;
-        
+.soc-search-filterbar {
+    display: flex;
+    width: $soc-sidebar-width;
+    height: 40px;
+    .soc-search-filter {
+        flex-basis: 100%;
+    }
+    $i: 1;
+    @each $color in $color-filter-1,
+    $color-filter-2,
+    $color-filter-3,
+    $color-filter-4,
+    $color-filter-5,
+    $color-filter-6,
+    $color-filter-7,
+    $color-filter-8,
+    $color-filter-9,
+    $color-filter-10 {
+        .filter#{$i} {
+            background-color:#{$color};
+            color: calculate-text-color($color);
+        }
+        $i: $i+1;
     }
 }
 
 .soc-search {
     width: $soc-sidebar-width;
+    background-color: $soc-base-color;
+    color: $soc-base-text-color;
+    .soc-search-button {
+        @extend .btn-primary;
+        width: $soc-sidebar-width;
+    }
 }
