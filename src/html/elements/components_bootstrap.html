@@ -1,3 +1,81 @@
-<div class="page-header">
-    <h1>Components</h1>
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>Components <small>Bootstrap examples</small></h1>
+    </div>
+
+    <p>This framework is built on top of a bootstrap Sass port, this allows for all known bootstrap components and style elements
+        to be used as well. Some of these might have been overridden by the Soc-core style but efforts were made to keep
+        this limited as much as possible. For more information visit the <a href="http://getbootstrap.com" alt="bootstrap">bootstrap</a>        website </p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">List groups</h3>
+                </div>
+                <div class="panel-body">
+                    <p>Regular links</p>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                        <a href="#" class="list-group-item  active">Morbi leo risus</a>
+                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item">Cras justo odio</a>
+                    </div>
+                    <hr/>
+                    <p>Special items</p>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item  disabled">Disabled: Morbi leo risus</a>
+                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Warning: Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item list-group-item-info">Info: Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Danger: Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item list-group-item-success">Success: Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item">Vestibulum at eros</a>
+                        <a href="#" class="list-group-item"><span class="badge">14</span>With a badge</a>
+                    </div>
+                    <hr/>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Alerts</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="alert alert-success" role="alert">
+                        <strong>Success!</strong> Everything is alright
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        <strong>Informational</strong> It might have worked, but maybe check some things
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Warning!</strong> Looks innocent, but probably went wrong underneath
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        <strong>Error!</strong> Run
+                    </div>
+                    <hr/>
+                    <p>Dismissable alert</p>
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Warning!</strong> Better check it
+                    </div>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Error!</strong> Action failed
+                    </div>
+                    <hr/>
+                    <p>Links in alerts</p>
+                    <div class="alert alert-info" role="alert">
+                        <strong>Informational</strong> It might have worked, but maybe check some <a href="#" class="alert-link">things</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

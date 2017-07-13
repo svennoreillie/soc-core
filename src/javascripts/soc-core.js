@@ -9,6 +9,7 @@ $(document).ready(function () {
     //Loading navigation content 
     $("#navbarContent").load("elements/navigation.html", navbarCompleted);
     $("#sidebarContent").load("elements/sidebar.html", sidebarCompleted);
+    $("#socComponentContent").load("elements/components_soc.html");
     $("#typographyContent").load("elements/typography.html");
     $("#gridContent").load("elements/grid.html");
     
