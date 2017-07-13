@@ -39,6 +39,7 @@ $(document).ready(function () {
     function sidebarCompleted() {
         $(".searchContent1").load("elements/searchresult.html");
         $(".searchContent2").load("elements/searchresult2.html");
+        $(".searchContent3").load("elements/searchresult3.html");
 
         $(".soc-search-button").click(function (event) {
             event.preventDefault();

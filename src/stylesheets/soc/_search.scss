@@ -24,11 +24,32 @@
 }
 
 .soc-searchitem {
-    background-color: white;
-    color: black;
-    padding: 7px 2px 7px 5px;
-    border-bottom: solid black 1px;
-    font-size: 120%;
+    background-color: $soc-base-color;
+    color: $soc-base-text-color;
+    padding: 7px;
+    padding-right: 2px;
+    border-bottom: solid $soc-secondary-color 1px;
+    font-size: 110%;
+    //border-right: solid $soc-secondary-color 1px;
+
+    &.active {
+        background-color: darken($soc-base-color, 15%);
+    }
+
+    &:hover {
+        background-color: darken($soc-base-color, 10%);
+    }
+
+    .soc-typography-name {
+        line-height: 30px;
+    }
+
+    .soc-searchitem-badge {
+        margin:5px;
+        float: right;
+        background-color: $soc-secondary-accent-color;
+        color: calculate-text-color($soc-secondary-accent-color);
+    }
 
     $i: 1;
     @each $color in $color-filter-1,
@@ -52,16 +73,26 @@
 
 .soc-search {
     width: $soc-sidebar-width;
-    background-color: $soc-base-color;
-    color: $soc-base-text-color;
+    background-color: $soc-secondary-color;
+    color: $soc-secondary-text-color;
+
 
     .soc-search-form {
-        padding-top: 10px;
+        padding: 10px 0px;
     }
 
     .soc-search-button {
-        @extend .btn-primary;
         width: $soc-sidebar-width;
+        background-color: $soc-accent-color;
+        border-color: $soc-accent-color;
+        color: $soc-accent-text-color;
+        &:hover,
+        &:active,
+        &:focus,
+        &:active:focus {
+            background-color: darken($soc-accent-color, 8%);
+            border-color: darken($soc-accent-color, 8%);
+        }
     }
 
     .soc-search-filterbar {
