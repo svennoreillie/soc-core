@@ -1,0 +1,39 @@
+<div ng-repeat="r in vm.GetRequests() | filter: vm.Onfilter | orderBy:['-NumberOfDaysLeft', 'LastName','FirstName'] | limitTo: vm.NumberOfItems"
+        class="animation ng-scope" 
+        style="height:94px;">
+
+    <button class="btn btn-default list-group-item col-md-12 col-xs-12 col-sm-12 ng-scope btn-border-request-new active"
+        ng-class="{
+                    active: r.RequestId == RequestId,
+                    'btn-border-request-new': r.Status === Models.RequestStatusModel.New,
+                    'btn-border-request-validated': r.Status === Models.RequestStatusModel.Validated,
+                    'btn-border-request-planned': r.Status === Models.RequestStatusModel.Planned,
+                    'btn-border-request-executed': r.Status === Models.RequestStatusModel.Executed,
+                    'btn-border-request-dispatched': r.Status === Models.RequestStatusModel.Dispatched,
+                    'btn-border-request-annulated': r.Status === Models.RequestStatusModel.Annulated
+                }">
+    <div ng-style="{'font-style': r.IsRenewal ? 'italic' : 'normal', color: r.IsRenewal ? 'royalblue': 'black'}" style="font-style: normal; color: black;">
+        <div class="list-group-item-heading pull-left">
+            <div ng-class="{'deathcross': r.IsDead, 'onbekend': r.Onbekend, 'geniet': r.Geniet, 'genietgeen': r.GenietGeen}"></div>
+            <span class="text-truncate ng-binding" title="Oost Vlaanderen" ng-style="{'max-width': r.HasIcons ? '150px' : '175px'}" style="max-width: 175px;">
+                <i class="glyphicon glyphicon-exclamation-sign ng-hide" aria-hidden="true" ng-show="r.IsUrgentRequest"></i>
+                Oost Vlaanderen
+            </span><br>
+            <span class="text-truncate ng-binding" style="font-size: smaller;">
+                9000 GENT&nbsp;
+            </span>
+            <span class="text-truncate ng-binding" style="font-size: smaller;">13j</span>
+        </div>
+        <span class="list-group-item-text pull-right badge ng-binding badge-danger" ng-show="r.NumberOfDaysLeft > -31" ng-class="{'badge-warning': r.NumberOfDaysLeft <= 0, 'badge-danger': r.NumberOfDaysLeft >= 1}">736522</span>
+        <br>
+        <br>
+        <br>
+        <span class="list-group-item-text pull-left ng-binding" style="font-size: smaller;">
+            &nbsp;
+        </span>
+        <span class="list-group-item-text pull-right ng-binding" style="font-size: smaller;">
+            &nbsp;
+        </span>
+    </div>
+</button>
+</div>

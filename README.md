@@ -14,12 +14,11 @@ Soc is an in-house developed front end framework in order to maintain a similar 
 * Donwload nodeJS [http://nodejs.org/download/](http://nodejs.org/download/) for your OS and install. Check by running 'node -v' in a terminal window.
 * npm should come installed with node, check by running 'npm -v'
 * Because npm is more frequently updated than node, update it by running 'npm install npm@latest -g'
-//TODO:: Remove * Install webpack globally by runnig 'npm install webpack -g'
 
 ### Quick Look
 To have a quick look at the style, without editing.
 
-* make sure you have the prerequisites (git & npm)
+* Make sure you have the prerequisites (git & npm)
 * Open up a terminal at a desired empty folder, make sure you have sufficient administrator rights. 
 * Run 'git clone https://github.com/svennoreillie/soc-core.git'
 * cd into the soc-core project

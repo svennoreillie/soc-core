@@ -23,7 +23,32 @@
     }
 }
 
+.soc-searchitem {
+    background-color: white;
+    color: black;
+    padding: 7px 2px 7px 5px;
+    border-bottom: solid black 1px;
+    font-size: 120%;
 
+    $i: 1;
+    @each $color in $color-filter-1,
+    $color-filter-2,
+    $color-filter-3,
+    $color-filter-4,
+    $color-filter-5,
+    $color-filter-6,
+    $color-filter-7,
+    $color-filter-8,
+    $color-filter-9,
+    $color-filter-10 {
+        &.filter#{$i} {
+            border-left-color: $color;
+            border-left-style: solid;
+            border-left-width: 8px;
+        }
+        $i: $i+1;
+    }
+}
 
 .soc-search {
     width: $soc-sidebar-width;

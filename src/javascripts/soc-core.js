@@ -11,6 +11,7 @@ $(document).ready(function () {
     $("#sidebarContent").load("elements/sidebar.html", sidebarCompleted);
     $("#typographyContent").load("elements/typography.html");
     $("#gridContent").load("elements/grid.html");
+    
     $("#bootstrapComponentContent").load("elements/components_bootstrap.html");
 
     //Url changes
@@ -36,6 +37,9 @@ $(document).ready(function () {
     }
 
     function sidebarCompleted() {
+        $(".searchContent1").load("elements/searchresult.html");
+        $(".searchContent2").load("elements/searchresult2.html");
+
         $(".soc-search-button").click(function (event) {
             event.preventDefault();
             $(".soc-search-form").toggle("fast");
