@@ -1,6 +1,6 @@
 {
   "name": "soc-core",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Core sass framework based on Bootstrap",
   "files": [
     "dist/app.bundle.js",
