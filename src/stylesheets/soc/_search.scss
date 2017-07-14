@@ -1,7 +1,6 @@
 @import "variables";
 @import "mixins";
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
-
 .soc-sidebar {
     .soc-searchresult {
         width: $soc-sidebar-width;
@@ -30,27 +29,24 @@
     padding-right: 2px;
     border-bottom: solid $soc-secondary-color 1px;
     font-size: 110%;
-    //border-right: solid $soc-secondary-color 1px;
-
+    cursor: pointer; //border-right: solid $soc-secondary-color 1px;
     &.active {
         background-color: darken($soc-base-color, 15%);
     }
-
     &:hover {
         background-color: darken($soc-base-color, 10%);
     }
-
     .soc-typography-name {
         line-height: 30px;
+        cursor: pointer;
     }
-
     .soc-searchitem-badge {
-        margin:5px;
+        margin: 5px;
         float: right;
         background-color: $soc-secondary-accent-color;
         color: calculate-text-color($soc-secondary-accent-color);
+        cursor: pointer;
     }
-
     $i: 1;
     @each $color in $color-filter-1,
     $color-filter-2,
@@ -75,12 +71,9 @@
     width: $soc-sidebar-width;
     background-color: $soc-secondary-color;
     color: $soc-secondary-text-color;
-
-
     .soc-search-form {
         padding: 10px 0px;
     }
-
     .soc-search-button {
         width: $soc-sidebar-width;
         background-color: $soc-accent-color;
@@ -94,38 +87,36 @@
             border-color: darken($soc-accent-color, 8%);
         }
     }
-
     .soc-search-filterbar {
-    display: flex;
-    width: $soc-sidebar-width;
-    height: 40px;
-    .soc-search-filter {
-        flex-basis: 100%;
-    }
-    $i: 1;
-    @each $color in $color-filter-1,
-    $color-filter-2,
-    $color-filter-3,
-    $color-filter-4,
-    $color-filter-5,
-    $color-filter-6,
-    $color-filter-7,
-    $color-filter-8,
-    $color-filter-9,
-    $color-filter-10 {
-        .filter#{$i} {
-            background-color:$color;
-            color: calculate-text-color($color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: small;
-
-           &:hover {
-             background-color: darken($color, 15%);
-           }
+        display: flex;
+        width: $soc-sidebar-width;
+        height: 40px;
+        .soc-search-filter {
+            flex-basis: 100%;
         }
-        $i: $i+1;
+        $i: 1;
+        @each $color in $color-filter-1,
+        $color-filter-2,
+        $color-filter-3,
+        $color-filter-4,
+        $color-filter-5,
+        $color-filter-6,
+        $color-filter-7,
+        $color-filter-8,
+        $color-filter-9,
+        $color-filter-10 {
+            .filter#{$i} {
+                background-color: $color;
+                color: calculate-text-color($color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: small;
+                &:hover {
+                    background-color: darken($color, 15%);
+                }
+            }
+            $i: $i+1;
+        }
     }
-}
 }
