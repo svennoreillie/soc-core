@@ -1,11 +1,11 @@
 {
   "name": "soc-core",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Core sass framework based on Bootstrap",
   "directories": {
     "lib": "./src"
   },
-  "files":[
+  "files": [
     "./dist/app.bundle.js",
     "./dist/vendor.bundle.js",
     "./dist/shared.bundle.js",
