@@ -4,6 +4,8 @@ $(document).ready(function () {
 
     function init() {
         setActiveLinks();
+        navbarCompleted();
+        sidebarCompleted();
     }
 
     //Loading navigation content 
