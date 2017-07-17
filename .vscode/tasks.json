@@ -4,5 +4,13 @@
     "version": "0.1.0",
     "command": "npm",
     "isShellCommand": true,
-    "args": ["start"]
+    "tasks": [
+        {
+        // Build task, Ctrl+Shift+B
+        // "npm install --loglevel info"
+        "taskName": "start",
+        "isBuildCommand": true,
+        "args": ["start"]
+        }
+    ]
 }

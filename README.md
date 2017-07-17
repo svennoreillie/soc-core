@@ -49,9 +49,9 @@ Documentation of the various components can be found here. Example sites are loc
 * Create a pull request
 
 ### Extending the project
-Make sure you have all the prerequisites as mentioned above.
+Make sure you have all the prerequisites as mentioned above and run 'npm install' at the root of the project.
 
-Soc-core is created using Visual Studio Code and it is recommended you use this IDE when contributing to the project. When this project is opened in Code, press Ctrl+Shift+B to run the default build task, the project is configured to install all npm packages, pack the project using webpack, starting a dev server and opening the default browser to the created website.
+Soc-core is created using Visual Studio Code and it is recommended you use this IDE when contributing to the project. When this project is opened in Code, press Ctrl+Shift+B (or run the build command) to run the default build task, the project is configured to pack the project using webpack, start a dev server and opening the default browser to the created website.
 
 When Visual Studio code is not an option install npm packages manually and run 'npm start' in a terminal window at the root of the project.
 After this you can navigate to 'http://localhost:8080' (or a different port if the default one wasn't available) to view the example website. 
