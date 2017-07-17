@@ -107,3 +107,7 @@ $navbar-default-link-disabled-bg:          transparent !default;
 $navbar-default-brand-color:               $navbar-default-link-color !default;
 $navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
 $navbar-default-brand-hover-bg:            transparent !default;
+
+$border-radius-base:        0 !default;
+$border-radius-large:       0 !default;
+$border-radius-small:       0 !default;

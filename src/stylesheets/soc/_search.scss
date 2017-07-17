@@ -73,6 +73,9 @@
     color: $soc-secondary-text-color;
     .soc-search-form {
         padding: 10px 0px;
+        .soc-searchinfo {
+            font-size: 90%;
+        }
     }
     .soc-search-button {
         width: $soc-sidebar-width;

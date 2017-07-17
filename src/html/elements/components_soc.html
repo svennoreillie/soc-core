@@ -7,33 +7,23 @@
     <p>These components are specific to the Soc style and should be used as much as possible in order to achieve a consistent
         look &amp; feel</p>
 
+    <h3>Soc Tabs</h3>
+    <p>These tabs will generally be the first item on a content page providing a switch between different sections of the content
+        provided.</p>
+    <p>It is recommended to follow up with a Soc Tab Header element.</p>
 </div>
 
-<h3>Soc Tabs</h3>
-<div class="btn-group btn-group-justified" role="group" 
-    style="padding: 10px 10px; background: #4fafdb;">
-    <div class="btn-group" role="group">
-        <div type="button" class="btn btn-default request-status request-status-first dropdown-toggle" 
-            style="padding: 0;">
-            Aangevraagd 
-        </div>
+<div class="btn-group btn-group-justified soc-tabgroup" role="group">
+    <div class="soc-tab">
+        Aangevraagd
     </div>
-    <div class="btn-group" role="group" ng-click="vm.setStatusHistory(2)">
-        <div class="btn btn-default request-status dropdown-toggle ng-binding"
-            style="padding: 0;">
-            Gevalideerd <i class="fa fa-snowflake-o" aria-hidden="true"></i>
-        </div>
+    <div class="soc-tab">
+        Gevalideerd
     </div>
-    <div class="btn-group" role="group" ng-click="vm.setStatusHistory(4)">
-        <div class="btn btn-default request-status dropdown-toggle ng-binding"
-            style="padding: 0;">
-            Gepland
-        </div>
+    <div class="soc-tab active">
+        Gepland
     </div>
-    <div class="btn-group" role="group" ng-click="vm.setStatusHistory(8)">
-        <div class="btn btn-default request-status request-status-last dropdown-toggle ng-binding request-status-active"
-            style="padding: 0;">
-            Uit te voeren
-        </div>
+    <div class="soc-tab">
+        Uit te voeren
     </div>
 </div>

@@ -5,6 +5,7 @@ var copyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
+        sitespecific: './src/javascripts/site-specific',
         app: './src/javascripts/soc-core',
         vendor: './src/javascripts/vendor',
         css: './src/stylesheets/soc.scss'
