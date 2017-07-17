@@ -27,9 +27,7 @@ A browser should open containing the contents of the built soc-core project
 
 
 ### Documentation
-* TODO => define the here part
-
-Documentation of the various components can be found here. Example sites are located in the src/html folder of this project. 
+Currently, documentation of the various components can be found in the examples which are located in the src/html folder of this project. We hope to extend the docs in a later stage of the project.
 
 
 ### Use soc-core in your own project
