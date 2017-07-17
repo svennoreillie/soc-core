@@ -32,9 +32,8 @@ A browser should open containing the contents of the built soc-core project
 Documentation of the various components can be found here. Example sites are located in the src/html folder of this project. 
 
 
-
-### Use in your own project
-1. Change directory to root of project in a terminal
+### Use soc-core in your own project
+1. Change directory to root of your project in a terminal
 2. Run 'npm install soc-core --save-dev'
 3. Include 'soc.css' and 'soc.js' in your website
 4. Check documentation to get started
@@ -58,7 +57,27 @@ After this you can navigate to 'http://localhost:8080' (or a different port if t
 
 The project is setup to be a live session, meaning changes made in code will automatically trigger a refresh in the browser.
 
+### Guidelines
+The project contains all of its source files int the src folder split into seperate folders based on the type of file. 
 
+#### Sass files
+Sass files belong in the stylesheets folder. Keep these clean as this is the core of the project. We opted to work with a soc.scss file importing all the partial files which are divided based on the feature or element they style.
+
+The _variables are imported before the bootstrap variables in order to override the bootstrap ones. 
+
+##### Template variables
+Template variables are not meant to override the soc-core variables, even though it is possible to do this. This file is meant to define a color scheme, some width and height definitions are given, settings for general animation can be set here as well. 
+#### Javascript files
+A soc-core.js file exists to provide scripts for the style. Scripts specific for the examples in the html folder belong in the site-specific.js file as this will not be bundled with the others. When using external frameworks, a require link should be provided in the vendor.js file. 
+#### Html files
+These are only for the example pages and provide samples as well as documentation, when changing styling or features, make sure there are plenty of examples to make clear what your change brings to the updated version.
+
+### Building soc-core
+Soc-core uses webpack to build so you can just run 'webpack' in a terminal at the root of the project which will create a dist folder containing javascript bundles and generated css files. Before a new version is published to npm a build must be ran for all files to be updated correctly. 
+
+Testing only using the dev-server will not be enough as this will build its resources in memory and does not update the dist folder.
+
+The delivery method of this npm packages is not final and might change over time.
 
 ## License
 MIT License
