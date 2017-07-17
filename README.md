@@ -30,10 +30,10 @@ A browser should open containing the contents of the built soc-core project
 Currently, documentation of the various components can be found in the examples which are located in the src/html folder of this project. We hope to extend the docs in a later stage of the project.
 
 
-### Use soc-core in your own project
+### Using soc-core in your own project
 1. Change directory to root of your project in a terminal
 2. Run 'npm install soc-core --save-dev'
-3. Include 'soc.css' and 'soc.js' in your website
+3. Include 'shared.bundle.js', 'vendor.bundle.js' and 'app.bundle.js' as well as 'soc-core.css' in your website
 4. Check documentation to get started
 5. View html examples in the src/html folder
 
