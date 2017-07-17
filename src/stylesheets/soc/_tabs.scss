@@ -24,3 +24,19 @@
         }
     }
 }
+
+.soc-tab-header {
+    background-color:   $soc-accent-color;
+    color:              $soc-accent-text-color;
+    font-size:          120%;
+    padding:            10px;
+
+    .soc-tab-header-title {
+        font-weight: bold;
+    }
+
+    .soc-tab-header-right {
+        @extend .text-right;
+        @extend .pull-right;
+    }
+}

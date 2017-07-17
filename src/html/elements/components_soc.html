@@ -1,4 +1,4 @@
-<a name="soctabs"></a>
+<a name="soccomponents"></a>
 <div class="container-fluid">
     <div class="page-header">
         <h1>Soc Components <small>Soc-core style building blocks</small></h1>
@@ -9,11 +9,13 @@
 
     <h3>Soc Tabs</h3>
     <p>These tabs will generally be the first item on a content page providing a switch between different sections of the content
-        provided.</p>
+        provided.
+    </p>
     <p>It is recommended to follow up with a Soc Tab Header element.</p>
 </div>
 
-<div class="btn-group btn-group-justified soc-tabgroup" role="group">
+<a name="soctabs"></a>
+<div class="btn-group btn-group-justified soc-tabgroup">
     <div class="soc-tab">
         Aangevraagd
     </div>
@@ -26,4 +28,23 @@
     <div class="soc-tab">
         Uit te voeren
     </div>
+</div>
+
+<a name="soctabheader"></a>
+<div class="soc-tab-header">
+    <div>
+        <span class="soc-tab-header-right">Leuven</span>
+        <span class="soc-tab-header-title">
+            <span class="soc-typography-name">Janssens</span> Marina
+            <i class="fa fa-venus" aria-hidden="true"></i>
+        </span>
+    </div>
+    <div>
+        <span>89120125468</span>
+        <span class="soc-tab-header-right">304/00000468437</span>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <p>Above we see the Soc tab header being applied after the the Soc tab header, information can be layed out to the right by using the soc-tab-header-right class. Apply the soc-tab-header-title class when a heavier font is required.</p>
 </div>
