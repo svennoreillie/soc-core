@@ -1,6 +1,6 @@
 # soc-core
 
-v0.1.20
+v0.1.21
 
 ## Description
 This is a sass framework providing styling for base elements of Soc style. 
