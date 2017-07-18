@@ -1,141 +1,4 @@
 <a name="soccomponents"></a>
-<div class="container-fluid">
-    <div class="page-header">
-        <h1>Soc Components <small>Soc-core style building blocks</small></h1>
-    </div>
-
-    <p>These components are specific to the Soc style and should be used as much as possible in order to achieve a consistent
-        look &amp; feel</p>
-
-    <a name="socpanel"></a>
-    <h2>Soc panels</h2>
-    <p>A soc-panel is a wrapper around some content that should logically stick together. Panels are responsive meaning they
-        will adjust their size to fit the page in the best way possible. 2 styles of the panel are available, the default
-        light one and a heavier one used by provided the 'heavy' class on the panel.</p>
-    <p>A panel contains a title and a content section that can optionally collapse by specifying a div with the soc-collapser
-        class as the first element in the panel. This feature requeres the javascript bundle to be included. </p>
-    <p>A response design using Bootstrap's grid system can also be applied to the content of the panel by wrapping it in container-fluid
-        div, see the <a href="#grid">grid</a> section for more details on these features.</p>
-
-    <div class="soc-panel">
-        <div class="soc-collapser">
-            <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
-        </div>
-        <div class="soc-title">
-            The Story of Lorem Ipsum
-        </div>
-        <div class="soc-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <p>This is the default panel style with some responsive content inside. Resize the page to view the
-                            effect on the columns below. </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                            type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                            but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
-                            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                            with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                            distribution of letters, as opposed to using 'Content here, content here', making it look like
-                            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
-                            their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
-                            their infancy. Various versions have evolved over the years, sometimes by accident, sometimes
-                            on purpose (injected humour and the like).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="soc-panel secondary">
-        <div class="soc-collapser">
-            <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
-        </div>
-        <div class="soc-title">
-            The secondary story of Lorem Ipsum
-        </div>
-        <div class="soc-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <p>This is the heavy panel style with some responsive content inside. Resize the page to view the effect
-                            on the columns below. </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus justo, vehicula in nisl auctor,
-                            tincidunt pellentesque lorem. Pellentesque id risus augue. Nulla at arcu non urna imperdiet mollis.
-                            Nullam id viverra arcu, sit amet facilisis tellus. Nulla vestibulum, felis et ullamcorper efficitur,
-                            eros risus laoreet orci, sit amet ullamcorper odio lorem eu elit. Vivamus nec neque at ligula
-                            vestibulum maximus non in sapien. Curabitur mollis sagittis orci, at eleifend dui laoreet a.
-                            Mauris semper quis dolor eu mollis. Maecenas sollicitudin vulputate diam nec imperdiet. Fusce
-                            condimentum orci erat, et tempus odio ultricies vitae. Class aptent taciti sociosqu ad litora
-                            torquent per conubia nostra, per inceptos himenaeos. Integer cursus odio id maximus pharetra.</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <p>Sed faucibus, libero ac maximus congue, tortor libero aliquet orci, et gravida mi sapien non massa.
-                            In placerat leo ullamcorper felis consectetur, vitae mollis nunc tristique. Donec mattis sodales
-                            sapien, vitae aliquam leo tristique at. Etiam sodales enim eu mi ullamcorper malesuada. Donec
-                            sit amet libero sit amet mauris tincidunt rhoncus ut a dolor. Nulla porta sodales eros, eu feugiat
-                            purus consequat vitae. Quisque ac nisl placerat, eleifend risus at, tincidunt nibh. Aliquam maximus
-                            pretium fringilla. Nulla facilisis enim sit amet tincidunt pretium. Suspendisse quis mauris dolor.
-                            Donec at vestibulum ipsum. Maecenas rutrum tortor ut lorem consequat lobortis. Donec id dignissim
-                            mauris. Praesent non odio in libero rhoncus venenatis. Etiam et sem convallis, finibus ex eu,
-                            bibendum sapien. Vestibulum vel porta lectus.k</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="soc-panel heavy">
-        <div class="soc-collapser">
-            <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
-        </div>
-        <div class="soc-title">
-            The heavy story of Lorem Ipsum
-        </div>
-        <div class="soc-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <p>This is the heavy panel style with some responsive content inside. Resize the page to view the effect
-                            on the columns below. </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <p>Proin sit amet elit non velit suscipit pharetra eget ut est. Proin auctor a nunc vel posuere. Mauris
-                            ut mi sollicitudin justo laoreet pulvinar. Suspendisse potenti. In sit amet gravida elit, placerat
-                            mollis purus. Maecenas nec augue maximus, facilisis ipsum sed, porttitor erat. Nam bibendum mattis
-                            rhoncus. Curabitur aliquam ac magna id egestas. Proin aliquet, tellus non dapibus congue, ante
-                            lectus semper ex, et aliquam mauris metus et augue. Orci varius natoque penatibus et magnis dis
-                            parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per
-                            conubia nostra, per inceptos himenaeos. Nam dictum pellentesque gravida. Donec semper rhoncus
-                            odio, eu dapibus massa iaculis quis. Sed et pretium turpis.</p>
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <p>Sed tortor ante, hendrerit ac mi ut, sagittis pulvinar ligula. Aenean interdum lacus at dolor laoreet
-                            consequat. In congue fermentum ante. Praesent vehicula neque nunc, id scelerisque tellus ultricies
-                            et. Aenean accumsan libero sed sem lacinia malesuada ac et nisi. Sed pharetra suscipit interdum.
-                            Aenean sit amet leo eget tortor aliquet interdum quis ac eros. Quisque scelerisque massa ac ligula
-                            semper sagittis. Ut nisi ex, finibus quis dictum sed, blandit non enim. Vivamus aliquam justo
-                            sit amet ipsum molestie mattis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <div class="container-fluid">
@@ -209,3 +72,214 @@
         <span class="soc-tab-header-right">311/00000468517</span>
     </div>
 </div>
+
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>Soc Components <small>Soc-core style building blocks</small></h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <p>These components are specific to the Soc style and should be used as much as possible in order to achieve a consistent
+                look &amp; feel</p>
+
+            <a name="socpanel"></a>
+            <h2>Soc panels</h2>
+            <p>A soc-panel is a wrapper around some content that should logically stick together. Panels are responsive meaning
+                they will adjust their size to fit the page in the best way possible. 4 styles of the panel are available,
+                the default light one and a heavier one used by provided one of the following classes on the panel: 'secondary',
+                'accent' or 'heavy'.
+            </p>
+            <p>A panel contains a title and a content section that can optionally collapse by specifying a div with the soc-collapser
+                class as the first element in the panel. This feature requeres the javascript bundle to be included. </p>
+            <p>A response design using Bootstrap's grid system can also be applied to the content of the panel by wrapping it
+                in container-fluid div, see the <a href="#grid">grid</a> section for more details on these features.</p>
+
+            <div class="soc-panel">
+                <div class="soc-collapser">
+                    <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
+                </div>
+                <div class="soc-title">
+                    The Story of Lorem Ipsum
+                </div>
+                <div class="soc-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p>This is the default panel style with some responsive content inside. Resize the page to view
+                                    the effect on the columns below. </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                    been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                    took a galley of type and scrambled it to make a type specimen book. It has survived
+                                    not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+                                    including versions of Lorem Ipsum.
+                                </p>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <p>It is a long established fact that a reader will be distracted by the readable content of
+                                    a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                                    normal distribution of letters, as opposed to using 'Content here, content here', making
+                                    it look like readable English. Many desktop publishing packages and web page editors
+                                    now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
+                                    uncover many web sites still in their infancy. Various versions have evolved over the
+                                    years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
+                                    of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+                                    a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
+                                    Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of
+                                    the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes
+                                    from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of
+                                    Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                                    ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
+                                    dolor sit amet..", comes from a line in section 1.10.32.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+            <div class="soc-panel accent">
+                <div class="soc-collapser">
+                    <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
+                </div>
+                <div class="soc-title">
+                    The accent story of Lorem Ipsum
+                </div>
+                <div class="soc-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p>This is the heavy panel style with some responsive content inside. Resize the page to view
+                                    the effect on the columns below. </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus justo, vehicula in nisl
+                                    auctor, tincidunt pellentesque lorem. Pellentesque id risus augue. Nulla at arcu non
+                                    urna imperdiet mollis. Nullam id viverra arcu, sit amet facilisis tellus. Nulla vestibulum,
+                                    felis et ullamcorper efficitur, eros risus laoreet orci, sit amet ullamcorper odio lorem
+                                    eu elit. Vivamus nec neque at ligula vestibulum maximus non in sapien. Curabitur mollis
+                                    sagittis orci, at eleifend dui laoreet a. Mauris semper quis dolor eu mollis. Maecenas
+                                    sollicitudin vulputate diam nec imperdiet. Fusce condimentum orci erat, et tempus odio
+                                    ultricies vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                                    per inceptos himenaeos. Integer cursus odio id maximus pharetra.</p>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <p>Sed faucibus, libero ac maximus congue, tortor libero aliquet orci, et gravida mi sapien
+                                    non massa. In placerat leo ullamcorper felis consectetur, vitae mollis nunc tristique.
+                                    Donec mattis sodales sapien, vitae aliquam leo tristique at. Etiam sodales enim eu mi
+                                    ullamcorper malesuada. Donec sit amet libero sit amet mauris tincidunt rhoncus ut a dolor.
+                                    Nulla porta sodales eros, eu feugiat purus consequat vitae. Quisque ac nisl placerat,
+                                    eleifend risus at, tincidunt nibh. Aliquam maximus pretium fringilla. Nulla facilisis
+                                    enim sit amet tincidunt pretium. Suspendisse quis mauris dolor. Donec at vestibulum ipsum.
+                                    Maecenas rutrum tortor ut lorem consequat lobortis. Donec id dignissim mauris. Praesent
+                                    non odio in libero rhoncus venenatis. Etiam et sem convallis, finibus ex eu, bibendum
+                                    sapien. Vestibulum vel porta lectus.k</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+            <div class="soc-panel secondary">
+                <div class="soc-collapser">
+                    <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
+                </div>
+                <div class="soc-title">
+                    The secondary story of Lorem Ipsum
+                </div>
+                <div class="soc-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p>This is the heavy panel style with some responsive content inside. Resize the page to view
+                                    the effect on the columns below. </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus justo, vehicula in nisl
+                                    auctor, tincidunt pellentesque lorem. Pellentesque id risus augue. Nulla at arcu non
+                                    urna imperdiet mollis. Nullam id viverra arcu, sit amet facilisis tellus. Nulla vestibulum,
+                                    felis et ullamcorper efficitur, eros risus laoreet orci, sit amet ullamcorper odio lorem
+                                    eu elit. Vivamus nec neque at ligula vestibulum maximus non in sapien. Curabitur mollis
+                                    sagittis orci, at eleifend dui laoreet a. Mauris semper quis dolor eu mollis. Maecenas
+                                    sollicitudin vulputate diam nec imperdiet. Fusce condimentum orci erat, et tempus odio
+                                    ultricies vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                                    per inceptos himenaeos. Integer cursus odio id maximus pharetra.</p>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <p>Sed faucibus, libero ac maximus congue, tortor libero aliquet orci, et gravida mi sapien
+                                    non massa. In placerat leo ullamcorper felis consectetur, vitae mollis nunc tristique.
+                                    Donec mattis sodales sapien, vitae aliquam leo tristique at. Etiam sodales enim eu mi
+                                    ullamcorper malesuada. Donec sit amet libero sit amet mauris tincidunt rhoncus ut a dolor.
+                                    Nulla porta sodales eros, eu feugiat purus consequat vitae. Quisque ac nisl placerat,
+                                    eleifend risus at, tincidunt nibh. Aliquam maximus pretium fringilla. Nulla facilisis
+                                    enim sit amet tincidunt pretium. Suspendisse quis mauris dolor. Donec at vestibulum ipsum.
+                                    Maecenas rutrum tortor ut lorem consequat lobortis. Donec id dignissim mauris. Praesent
+                                    non odio in libero rhoncus venenatis. Etiam et sem convallis, finibus ex eu, bibendum
+                                    sapien. Vestibulum vel porta lectus.k</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="soc-panel heavy">
+                <div class="soc-collapser">
+                    <i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
+                </div>
+                <div class="soc-title">
+                    The heavy story of Lorem Ipsum
+                </div>
+                <div class="soc-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p>This is the heavy panel style with some responsive content inside. Resize the page to view
+                                    the effect on the columns below. </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <p>Proin sit amet elit non velit suscipit pharetra eget ut est. Proin auctor a nunc vel posuere.
+                                    Mauris ut mi sollicitudin justo laoreet pulvinar. Suspendisse potenti. In sit amet gravida
+                                    elit, placerat mollis purus. Maecenas nec augue maximus, facilisis ipsum sed, porttitor
+                                    erat. Nam bibendum mattis rhoncus. Curabitur aliquam ac magna id egestas. Proin aliquet,
+                                    tellus non dapibus congue, ante lectus semper ex, et aliquam mauris metus et augue. Orci
+                                    varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class
+                                    aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                    Nam dictum pellentesque gravida. Donec semper rhoncus odio, eu dapibus massa iaculis
+                                    quis. Sed et pretium turpis.</p>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <p>Sed tortor ante, hendrerit ac mi ut, sagittis pulvinar ligula. Aenean interdum lacus at dolor
+                                    laoreet consequat. In congue fermentum ante. Praesent vehicula neque nunc, id scelerisque
+                                    tellus ultricies et. Aenean accumsan libero sed sem lacinia malesuada ac et nisi. Sed
+                                    pharetra suscipit interdum. Aenean sit amet leo eget tortor aliquet interdum quis ac
+                                    eros. Quisque scelerisque massa ac ligula semper sagittis. Ut nisi ex, finibus quis dictum
+                                    sed, blandit non enim. Vivamus aliquam justo sit amet ipsum molestie mattis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

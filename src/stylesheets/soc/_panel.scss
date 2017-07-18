@@ -1,8 +1,9 @@
 .soc-panel {
+    $soc-title-padding-right: 50px;
     .soc-title {
         @extend h3;
         padding-bottom: 8px;
-        padding-right: 50px;
+        padding-right: $soc-title-padding-right;
         border-bottom: solid 1px lightgray;
         margin-bottom: 0;
     }
@@ -16,7 +17,7 @@
         margin-top: 7px;
         color: #777;
     }
-    &:not(.heavy):not(.secondary) {
+    &:not(.heavy):not(.secondary):not(.accent) {
         .soc-content {
             .container-fluid {
                 margin: 0 -15px;
@@ -27,6 +28,7 @@
         .soc-title {
             padding: 6px;
             background-color: $soc-secondary-color;
+            padding-right: $soc-title-padding-right;
             color: $soc-secondary-text-color;
             border: solid 1px black;
         }
@@ -41,9 +43,29 @@
             margin-top: 8px;
         }
     }
+    &.accent {
+        .soc-title {
+            padding: 6px;
+            background-color: $soc-accent-color;
+            padding-right: $soc-title-padding-right;
+            color: $soc-secondary-text-color;
+            border: solid 1px &soc-accent-color;
+        }
+        .soc-content {
+            border-left: solid 1px $soc-accent-color;
+            border-right: solid 1px $soc-accent-color;
+            border-bottom: solid 1px $soc-accent-color;
+        }
+        .soc-collapser {
+            padding-right: 10px;
+            color: $soc-accent-text-color;
+            margin-top: 8px;
+        }
+    }
     &.heavy {
         .soc-title {
             padding: 8px;
+            padding-right: $soc-title-padding-right;
             background-color: black;
             color: white;
         }
