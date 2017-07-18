@@ -96,6 +96,7 @@
         height: 40px;
         .soc-search-filter {
             flex-basis: 100%;
+            cursor: pointer;
         }
         $i: 1;
         @each $color in $color-filter-1,
