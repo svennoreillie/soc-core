@@ -1,7 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Damion);
 .soc-typography-name {
     text-transform: uppercase;
 }
 
 .soc-typography-bold {
     font-weight: bold;
+}
+
+.soc-not-found {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 600px;
+    font-family: 'Damion';
+    font-size: 400%;
+    &::before {
+        display: block;
+        content: url('/images/data.png');
+        transform: scale(0.7);
+    }
+    &.pipe::before {
+        content: url('/images/pipe.jpg');
+        transform: scale(0.9);
+    }
 }

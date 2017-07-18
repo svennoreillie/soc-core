@@ -29,9 +29,11 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery"
         }),
-        new copyPlugin([
-            { from: 'src/html'}
-        ])
+        new copyPlugin([{
+            from: 'src/html'
+        }, {
+            from: 'src/images'
+        }])
     ],
 
     devtool: 'source-map',
@@ -42,7 +44,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.scss$/,
-            loader: extractText.extract('css-loader!sass-loader')
+            loader: extractText.extract('css-loader!sass-loader?sourceMap')
         }]
     },
 
