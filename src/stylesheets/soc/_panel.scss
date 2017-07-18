@@ -1,0 +1,69 @@
+.soc-panel {
+    .soc-title {
+        @extend h3;
+        padding-bottom: 8px;
+        padding-right: 50px;
+        border-bottom: solid 1px lightgray;
+        margin-bottom: 0;
+    }
+    .soc-content {
+        padding-top: 10px;
+    }
+    .soc-collapser {
+        padding: 4px;
+        cursor: pointer;
+        float: right;
+        margin-top: 7px;
+        color: #777;
+    }
+    &:not(.heavy):not(.secondary) {
+        .soc-content {
+            .container-fluid {
+                margin: 0 -15px;
+            }
+        }
+    }
+    &.secondary {
+        .soc-title {
+            padding: 6px;
+            background-color: $soc-secondary-color;
+            color: $soc-secondary-text-color;
+            border: solid 1px black;
+        }
+        .soc-content {
+            border-left: solid 1px black;
+            border-right: solid 1px black;
+            border-bottom: solid 1px black;
+        }
+        .soc-collapser {
+            padding-right: 10px;
+            color: $soc-secondary-text-color;
+            margin-top: 8px;
+        }
+    }
+    &.heavy {
+        .soc-title {
+            padding: 8px;
+            background-color: black;
+            color: white;
+        }
+        .soc-content {
+            border-left: solid 1px black;
+            border-right: solid 1px black;
+            border-bottom: solid 1px black;
+        }
+        .soc-collapser {
+            padding-right: 10px;
+            margin-top: 9px;
+            color: white;
+        }
+    }
+    &.collapsed {
+        .soc-content {
+            display: none;
+        }
+        .soc-title {
+            margin-bottom: 10px;
+        }
+    }
+}

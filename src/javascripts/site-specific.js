@@ -11,7 +11,7 @@ $(document).ready(function () {
     //Loading navigation content 
     $("#navbarContent").load("elements/navigation.html", navbarCompleted);
     $("#sidebarContent").load("elements/sidebar.html", sidebarCompleted);
-    $("#socComponentContent").load("elements/components_soc.html");
+    $("#socComponentContent").load("elements/components_soc.html", socCompleted);
     $("#typographyContent").load("elements/typography.html");
     $("#gridContent").load("elements/grid.html");
 
@@ -28,6 +28,14 @@ $(document).ready(function () {
 
         var hash = window.location.hash;
         $("[href='" + hash + "']").parent("li").addClass("active");
+    }
+
+    function socCompleted() {
+        $(".soc-collapser").click(function (event) {
+            event.preventDefault();
+            var panel = $(this).parents(".soc-panel").first();
+            panel.toggleClass("collapsed");
+        });
     }
 
     function navbarCompleted() {

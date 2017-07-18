@@ -10,4 +10,13 @@ $(document).ready(function () {
         $("#soc-sidebar-toggler i").toggleClass("hide");
     });
 
+    $(".soc-collapser").click(function (event) {
+        event.preventDefault();
+        var panel = $(this)
+                        .parents(".soc-panel")
+                        .first();
+        panel.toggleClass("collapsed");
+        
+    });
+
 });
