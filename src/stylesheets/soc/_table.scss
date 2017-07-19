@@ -5,5 +5,78 @@ div.soc-table {
         @extend .table;
         @extend .table-striped;
         @extend .table-hover;
+        th.soc-sort {
+            color: #23527c;
+            outline: 0;
+            cursor: pointer;
+        }
+        tbody>tr {
+            >td {
+                &.soc-table-action {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+                div.action {
+                    display: inline-block;
+                    font-size: 24px;
+                    margin: 0 5px;
+                    color: #333;
+                    cursor: pointer;
+                    i {
+                        vertical-align: middle;
+                    }
+                    &:first-of-type {
+                        margin-left:0;
+                    }
+                }
+            }
+            $i: 1;
+            @each $color in $color-filter-1,
+            $color-filter-2,
+            $color-filter-3,
+            $color-filter-4,
+            $color-filter-5,
+            $color-filter-6,
+            $color-filter-7,
+            $color-filter-8,
+            $color-filter-9,
+            $color-filter-10 {
+                &.filter#{$i} {
+                    border-left-color: $color;
+                    border-left-style: solid;
+                    border-left-width: 6px;
+                }
+                $i: $i+1;
+            }
+        }
+    } //features
+    &.select {
+        table {
+            //smaller first row
+            tr>td:first-of-type {
+                width: 30px;
+            }
+            >tbody>tr>td:first-of-type>i {
+                vertical-align: middle;
+            }
+        }
+    } //themes
+    &.secondary {
+        table>thead>tr:first-of-type {
+            background-color: $soc-secondary-color;
+            color: $soc-secondary-text-color;
+        }
+    }
+    &.accent {
+        table>thead>tr:first-of-type {
+            background-color: $soc-accent-color;
+            color: $soc-accent-text-color;
+        }
+    }
+    &.heavy {
+        table>thead>tr:first-of-type {
+            background-color: black;
+            color: white;
+        }
     }
 }

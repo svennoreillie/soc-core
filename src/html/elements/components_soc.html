@@ -354,18 +354,23 @@
         <div class="col-sm-12">
             <a name="soctable"></a>
             <h2>Table</h2>
-            <p>Use the soc-table class when you need to style a standard html table. 
-                More table elements will be added later containing sort / search / page functionality.</p>
+            <p>Use the soc-table class when you need to style a standard html table. More table elements will be added later
+                containing sort / search / page functionality.</p>
             <div class="alert alert-warning" role="alert">
-                <strong>Warning!</strong> The soc-table class must be defined on a div element surrounding the table in order to achieve a responsive design
+                <strong>Warning!</strong> The soc-table class must be defined on a div element surrounding the table in order
+                to achieve a responsive design
             </div>
 
-            <div class="soc-table">
+
+
+
+            <div class="soc-table select">
                 <table>
                     <thead>
                         <tr>
+                            <th><i class="fa fa-square-o ng-hide" aria-hidden="true"></i></th>
                             <th>Header</th>
-                            <th>Header</th>
+                            <th class="soc-sort">Header</th>
                             <th>Header</th>
                             <th>Header</th>
 
@@ -373,34 +378,89 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td><i class="fa fa-square-o ng-hide" aria-hidden="true"></i></td>
                             <td>cell 1</td>
                             <td>cell 2</td>
                             <td>cell 3</td>
-                            <td>cell 4</td>
+                            <td class="soc-table-action">
+                                <div class="action">
+                                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
+                            <td><i class="fa fa-check-square-o ng-hide" aria-hidden="true"></i></td>
                             <td>cell 1</td>
                             <td>cell 2</td>
                             <td>cell 3</td>
-                            <td>cell 4</td>
+                            <td class="soc-table-action">
+                                <div class="action">
+                                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
+                            <td><i class="fa fa-square-o ng-hide" aria-hidden="true"></i></td>
                             <td>cell 1</td>
                             <td>cell 2</td>
                             <td>cell 3</td>
-                            <td>cell 4</td>
+                            <td class="soc-table-action">
+                                <div class="action">
+                                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr class="filter2">
+                            <td><i class="fa fa-square-o ng-hide" aria-hidden="true"></i></td>
                             <td>cell 1</td>
                             <td>cell 2</td>
                             <td>cell 3</td>
-                            <td>cell 4</td>
+                            <td class="soc-table-action">
+                                <div class="action">
+                                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr class="filter4">
+                            <td><i class="fa fa-square-o ng-hide" aria-hidden="true"></i></td>
                             <td>cell 1</td>
                             <td>cell 2</td>
                             <td>cell 3</td>
-                            <td>cell 4</td>
+                            <td class="soc-table-action">
+                                <div class="action">
+                                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                </div>
+                                <div class="action">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -412,7 +472,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="well"><span>emmet:
-                    <pre><code>.soc-table>table>thead>tr>th{Header $}*4^^tbody>(tr>td{cell $}*4)*5</code></pre>
+                    <pre><code>.soc-table.select>table>(thead>tr>th{Header $}*5)+(tbody>(tr>th{Cell $}*4+(th.soc-table-action>.action>i.fa.fa-bookmark[aria-hidden="true"]))*6)</code></pre>
                 </span></div>
         </div>
     </div>
