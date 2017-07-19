@@ -21,7 +21,7 @@
             &::before {
                 display: block;
                 content: url('/images/pipe.jpg');
-                transform: scale(0.9);
+                transform: scale(0.75);
             }
         }
         &.image {
@@ -30,7 +30,7 @@
             &::before {
                 display: block;
                 content: url('/images/data.png');
-                transform: scale(0.7);
+                transform: scale(0.5);
             }
         }
     }
