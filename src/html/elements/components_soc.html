@@ -1,6 +1,5 @@
 <a name="soccomponents"></a>
 
-
 <div class="container-fluid">
     <div class="page-header">
         <h1>Soc Components <small>Soc-core style building blocks</small></h1>
@@ -29,10 +28,27 @@
 </div>
 
 <div class="container-fluid">
-    <a name="soctabheader"></a>
-    <h2>Soc Tab Header</h2>
-    <p>The Soc tab header is designed to be applied after the the Soc tab header, information can be layed out to the right
-        by using the soc-tab-header-right class. Apply the soc-tab-header-title class when a heavier font is required.</p>
+    <br>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                <pre><code>.btn-group.btn-group-justified.soc-tabgroup>(.soc-tab{Tab $})*3+.soc-tab.active{Tab 4}+.soc-tab{Tab 5}</code></pre>
+            </span></div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <a name="soctabheader"></a>
+            <h2>Soc Tab Header</h2>
+            <p>The Soc tab header is designed to be applied after the the Soc tab header, information can be layed out to the
+                right by using the soc-tab-header-right class. Apply the soc-tab-header-title class when a heavier font is
+                required. (This element must exist outside the bootstrap container)
+            </p>
+        </div>
+    </div>
 </div>
 
 <div class="soc-tab-header">
@@ -51,7 +67,19 @@
 
 <div class="container-fluid">
     <br>
-    <p>Below is an example of the Tabs combined with the header</p>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                <pre><code>.soc-tab-header>(div>span.soc-tab-header-right{Leuven}+span.soc-tab-header-title>span.soc-typography-name{Janssens }+{ Marina}+i.fa.fa-venus[aria-hidden="true"])+div>span{89120125468}+span.soc-tab-header-right{304/00000468437}</code></pre>
+            </span></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <p>Below is an example of the Tabs combined with the header</p>
+        </div>
+    </div>
 </div>
 
 <div class="btn-group btn-group-justified soc-tabgroup">
@@ -80,9 +108,6 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <p>These components are specific to the Soc style and should be used as much as possible in order to achieve a consistent
-                look &amp; feel</p>
-
             <a name="socpanel"></a>
             <h2>Soc panels</h2>
             <p>A soc-panel is a wrapper around some content that should logically stick together. Panels are responsive meaning
@@ -94,6 +119,8 @@
                 class as the first element in the panel. This feature requeres the javascript bundle to be included. </p>
             <p>A response design using Bootstrap's grid system can also be applied to the content of the panel by wrapping it
                 in container-fluid div, see the <a href="#grid">grid</a> section for more details on these features.</p>
+
+
 
             <div class="soc-panel">
                 <div class="soc-collapser">
@@ -282,24 +309,71 @@
             </div>
         </div>
     </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="well">
+                <div>
+                    <span>Basic panel emmet:
+                                <pre><code>.soc-panel>.soc-title{Panel title}+.soc-content>.container-fluid>.row>.col-sm-12{Panel content goes here}</code></pre>
+                            </span>
+                </div>
+                <div>
+                    <span>Heavy style panel emmet:
+                                <pre><code>.soc-panel.heavy>.soc-title{Panel title}+.soc-content>.container-fluid>.row>.col-sm-12{Panel content goes here}</code></pre>
+                            </span>
+                </div>
+                <div>
+                    <span>Collapsable panel emmet:
+                                <pre><code>.soc-panel>(.soc-collapser>i.fa.fa-ellipsis-h.fa-lg[aria-hidden="true"])+.soc-title{Panel title}+.soc-content>.container-fluid>.row>.col-sm-12{Panel content goes here}</code></pre>
+                            </span>
+                </div>
+                <div>
+                    <span>Responsive content emmet:
+                                <pre><code>.soc-panel>(.soc-collapser>i.fa.fa-ellipsis-h.fa-lg[aria-hidden="true"])+.soc-title{Panel title}+.soc-content>.container-fluid>.row>.col-sm-12.col-md-4{Column $}*3</code></pre>
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container-fluid">
+    <a name="socnotfound"></a>
     <h2>Not found message</h2>
-    <p>Use the soc-not-found class when you need to display a message that something is not available on the page. 
-        It will be automatically styled to be larger text centered to to page.
-        An image of magritte's famous pipe will be added when you add the 'pipe' class, only add a good caption to it.</p>
+    <p>Use the soc-not-found class when you need to display a message that something is not available on the page. It will be
+        automatically styled to be larger text centered to to page. An image of magritte's famous pipe will be added when
+        you add the 'pipe' class, only add a good caption to it.</p>
 
     <div class="soc-not-found">No records found</div>
 
-    <!-- this is just for spacing the 2 examples, don't copy -->
-    <div style="height: 250px"></div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                    <pre><code>.soc-not-found{No records found}</code></pre>
+                </span></div>
+        </div>
+    </div>
 
     <div class="soc-not-found image">No records found</div>
-    
-    <!-- this is just for spacing the 2 examples, don't copy -->
-    <div style="height: 250px"></div>
 
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                    <pre><code>.soc-not-found.image{No records found}</code></pre>
+                </span></div>
+        </div>
+    </div>
 
     <div class="soc-not-found pipe">Ceci n'est pas une erreur</div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                    <pre><code>.soc-not-found.pipe{Ceci n'est pas une erreur}</code></pre>
+                </span></div>
+        </div>
+    </div>
 </div>

@@ -14,6 +14,8 @@ $(document).ready(function () {
     $("#socComponentContent").load("elements/components_soc.html", socCompleted);
     $("#typographyContent").load("elements/typography.html");
     $("#gridContent").load("elements/grid.html");
+    $("#documentationInfo").load("elements/documentation_generalinfo.html");
+    
 
     $("#bootstrapComponentContent").load("elements/components_bootstrap.html");
 
