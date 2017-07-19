@@ -1,5 +1,8 @@
 .soc-panel {
     $soc-title-padding-right: 50px;
+
+    margin-bottom: 20px;
+
     .soc-title {
         @extend h3;
         padding-bottom: 8px;
