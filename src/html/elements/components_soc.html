@@ -354,8 +354,19 @@
         <div class="col-sm-12">
             <a name="soctable"></a>
             <h2>Table</h2>
-            <p>Use the soc-table class when you need to style a standard html table. More table elements will be added later
-                containing sort / search / page functionality.</p>
+            <p>Use the soc-table class when you need to style a standard html table. The table is, like the panels themed by
+                using the extra classes 'secondary', 'accent' or 'heavy' on the surrounding div element. Optionally striping
+                can be provided by adding the 'striped' class. </p>
+            <p>When selectable rows are required a checkbox can be added to the first column, it is recommended to use the font
+                awesome checkbox icons and handling visibility of the correct one using javascript. When your table contains
+                selection, add the 'select' class to the surrounding div element as well.</p>
+            <p>Table elements can also be styled, for example the header elements can be styled to show they are sortable by
+                adding 'soc-sort' to the th element. Rows itself can be given a 'filter' class to show them with a subtle
+                border on the left side matching the color of the filter, this will add a visual reference to the kind of
+                record aiding users in finding the right data quicker. A row can have an 'active' style applied to it which
+                can be used as an extra selected visual for example.</p>
+            <p>
+                More table elements will be added later containing sort / search / page functionality.</p>
             <div class="alert alert-warning" role="alert">
                 <strong>Warning!</strong> The soc-table class must be defined on a div element surrounding the table in order
                 to achieve a responsive design
@@ -364,7 +375,7 @@
 
 
 
-            <div class="soc-table select">
+            <div class="soc-table select striped secondary">
                 <table>
                     <thead>
                         <tr>
@@ -394,7 +405,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="active">
                             <td><i class="fa fa-check-square-o ng-hide" aria-hidden="true"></i></td>
                             <td>cell 1</td>
                             <td>cell 2</td>

@@ -6,6 +6,7 @@ $(document).ready(function () {
         setActiveLinks();
         navbarCompleted();
         sidebarCompleted();
+        socCompleted();
     }
 
     //Loading navigation content 

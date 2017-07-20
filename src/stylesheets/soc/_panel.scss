@@ -1,7 +1,7 @@
 .soc-panel {
     $soc-title-padding-right: 50px;
 
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 
     .soc-title {
         @extend h3;
@@ -51,7 +51,7 @@
             padding: 6px;
             background-color: $soc-accent-color;
             padding-right: $soc-title-padding-right;
-            color: $soc-secondary-text-color;
+            color: $soc-accent-text-color;
             border: solid 1px &soc-accent-color;
         }
         .soc-content {
@@ -84,6 +84,9 @@
         }
     }
     &.collapsed {
+    margin-bottom: 20px;
+
+
         .soc-content {
             display: none;
         }

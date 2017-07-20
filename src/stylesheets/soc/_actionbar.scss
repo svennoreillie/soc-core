@@ -33,7 +33,9 @@
 
 .soc-main {
     .soc-actionbar {
-        border-left: white solid 1px;
+        &.spacer {
+            border-left: white solid 1px;
+        }
     }
 }
 

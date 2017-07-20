@@ -1,9 +1,48 @@
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables';
 div.soc-table {
     @extend .table-responsive;
+    /*
+    /* Features */
+    &.select {
+        table {
+            //smaller first row
+            tr>td:first-of-type {
+                width: 30px;
+            }
+            >tbody>tr>td:first-of-type>i {
+                vertical-align: middle;
+            }
+        }
+    }
+    &.striped {
+        table {
+            @extend .table-striped;
+        }
+    }
+    /* 
+    /* Themes */
+    &.secondary {
+        table>thead>tr:first-of-type {
+            background-color: $soc-secondary-color;
+            color: $soc-secondary-text-color;
+        }
+    }
+    &.accent {
+        table>thead>tr:first-of-type {
+            background-color: $soc-accent-color;
+            color: $soc-accent-text-color;
+        }
+    }
+    &.heavy {
+        table>thead>tr:first-of-type {
+            background-color: black;
+            color: white;
+        }
+    }
+    /*    
+/* Table contents */
     table {
         @extend .table;
-        @extend .table-striped;
         @extend .table-hover;
         th.soc-sort {
             color: #4FAFDB;
@@ -11,6 +50,12 @@ div.soc-table {
             cursor: pointer;
         }
         tbody>tr {
+            &.active {
+                >td {
+                    background-color: $soc-table-active-color;
+                    color: $soc-table-active-text-color;
+                }
+            }
             >td {
                 &.soc-table-action {
                     padding-top: 0;
@@ -26,7 +71,7 @@ div.soc-table {
                         vertical-align: middle;
                     }
                     &:first-of-type {
-                        margin-left:0;
+                        margin-left: 0;
                     }
                 }
             }
@@ -48,35 +93,6 @@ div.soc-table {
                 }
                 $i: $i+1;
             }
-        }
-    } //features
-    &.select {
-        table {
-            //smaller first row
-            tr>td:first-of-type {
-                width: 30px;
-            }
-            >tbody>tr>td:first-of-type>i {
-                vertical-align: middle;
-            }
-        }
-    } //themes
-    &.secondary {
-        table>thead>tr:first-of-type {
-            background-color: $soc-secondary-color;
-            color: $soc-secondary-text-color;
-        }
-    }
-    &.accent {
-        table>thead>tr:first-of-type {
-            background-color: $soc-accent-color;
-            color: $soc-accent-text-color;
-        }
-    }
-    &.heavy {
-        table>thead>tr:first-of-type {
-            background-color: black;
-            color: white;
         }
     }
 }
