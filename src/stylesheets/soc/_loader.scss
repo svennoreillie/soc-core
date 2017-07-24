@@ -1,0 +1,59 @@
+.soc-loader {
+    $spinner-size: 120px;
+    $box-padding: 30px;
+    $text-height: 24px;
+    $spinner-to-text-spacing: 15px;
+    /* position properties */
+    position: fixed;
+    $width: $spinner-size + ($box-padding * 6); //6 to make it more rectangular 
+    width: $width;
+    $height: $spinner-size + ($box-padding * 2) + $spinner-to-text-spacing+ $text-height;
+    height: $height;
+    top: 40%;
+    margin-top: -($height / 2);
+    left: 50%;
+    margin-left: -($width / 2);
+    z-index: 8000;
+    /* text properties */
+    font-size: $text-height;
+    text-align: center;
+    /* box properties */
+    border: 1px solid black;
+    padding: $box-padding $box-padding * 3;
+    background-color: $soc-secondary-color;
+    /* loading properties */
+    display: none;
+    &::before {
+        border: $soc-loader-thickness solid $soc-secondary-color;
+        border-top: $soc-loader-thickness solid $soc-accent-color;
+        border-bottom: $soc-loader-thickness solid $soc-accent-color;
+        border-radius: 50%;
+        width: $spinner-size;
+        height: $spinner-size;
+        animation: spin 2s linear infinite;
+        margin: 0 auto $spinner-to-text-spacing auto;
+        display: block;
+        content: "";
+    }
+    &.demo-purpose {
+        margin: 30px;
+        display: block;
+        position: initial;
+        z-index: initial;
+    }
+}
+
+.soc-page.is-loading {
+    .soc-loader {
+        display: block;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

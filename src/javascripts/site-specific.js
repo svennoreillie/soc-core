@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import toastr from 'toastr';
 
 $(document).ready(function () {
 
@@ -16,15 +17,30 @@ $(document).ready(function () {
     $("#typographyContent").load("elements/typography.html");
     $("#gridContent").load("elements/grid.html");
     $("#documentationInfo").load("elements/documentation_generalinfo.html");
-    
 
-    $("#bootstrapComponentContent").load("elements/components_bootstrap.html");
+
+    $("#bootstrapComponentContent").load("elements/components_bootstrap.html", bootstrapCompleted);
 
     //Url changes
     $(window).on('hashchange', setActiveLinks);
 
 
     //Privates
+    function bootstrapCompleted() {
+        $("#toastBtn_info").click(function (e) {
+            toastr.info('Toasts are so much more than regular bread!')
+        });
+        $("#toastBtn_warning").click(function (e) {
+            toastr.warning('Where is that toast?')
+        });
+        $("#toastBtn_error").click(function (e) {
+            toastr.error('Toast is officially lost now')
+        });
+        $("#toastBtn_success").click(function (e) {
+            toastr.success('Congrats! Have some toast')
+        });
+    }
+
     function setActiveLinks() {
         //remove all actives
         $(".navbar a").parent("li").removeClass("active");
@@ -34,6 +50,14 @@ $(document).ready(function () {
     }
 
     function socCompleted() {
+        $("#showLoaderBtn").click(function (e) {
+            $(".soc-page").addClass("is-loading");
+
+            setTimeout(function () {
+                $(".soc-page").removeClass("is-loading");
+            }, 3000);
+        });
+
         $(".soc-collapser").click(function (event) {
             event.preventDefault();
             var panel = $(this).parents(".soc-panel").first();
