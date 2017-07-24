@@ -19,4 +19,8 @@ $(document).ready(function () {
         
     });
 
+    $(".soc-loader-block").click(function (event) {
+        event.preventDefault();
+    });
+
 });

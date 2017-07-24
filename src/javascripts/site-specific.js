@@ -24,7 +24,6 @@ $(document).ready(function () {
     //Url changes
     $(window).on('hashchange', setActiveLinks);
 
-
     //Privates
     function bootstrapCompleted() {
         $("#toastBtn_info").click(function (e) {
@@ -55,7 +54,7 @@ $(document).ready(function () {
 
             setTimeout(function () {
                 $(".soc-page").removeClass("is-loading");
-            }, 3000);
+            }, 5000);
         });
 
         $(".soc-collapser").click(function (event) {

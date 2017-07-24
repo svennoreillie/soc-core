@@ -541,18 +541,38 @@
     <a name="socloading"></a>
     <h2>Soc loading</h2>
     <p>To show a loader, have a div element inside the 'soc-page' div with the 'loader' class. This will result in a spinning
-        loader being shown when a 'is-loading' class is applied to the soc-page div. You can set the text of the loading window to anything you need.</p>
+        loader being shown when a 'is-loading' class is applied to the soc-page div. You can set the text of the loading
+        window to anything you need.</p>
     <p>Below is an example of the loading spinner. You can also click the show button to see the full effect of this for about
-        3 seconds.</p>
+        5 seconds. If blocking the user interface below the loader is required an overlay can be added by also adding a 'soc-loader-block'
+        div to the page. This functionality requires the app.bundle.js to be included in the page. </p>
     <div class="soc-loader demo-purpose">Loading..</div>
-    <button class="btn button-default" id="showLoaderBtn">
-        Show loader
-    </button>
+
     <div class="row">
         <div class="col-sm-12">
-            <div class="well"><span>emmet:
-                    <pre><code>.soc-loader{Loading...}</code></pre>
-                </span></div>
+            <button class="btn button-default" id="showLoaderBtn">
+                Show loader
+            </button>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="well">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span>emmet:
+                    <pre><code>.soc-loader{Loading...}</code></pre>
+                </span></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span>with blocking emmet:
+                    <pre><code>.soc-loader-block+.soc-loader{Loading...}</code></pre>
+                </span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
