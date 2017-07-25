@@ -1,0 +1,217 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <a name="socformelements"></a>
+            <div class="page-header">
+                <h1>Form elements <small>inputs &amp; other elements</small></h1>
+            </div>
+            <p>Below is a list of basic inputs to be used within forms or as stand alone elements. They can be disabled by adding
+                the 'disabled' attribute.</p>
+            <div class="alert alert-info" role="alert">
+                The 'form-control' class is not required when using these elements within a soc-form
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <h3>Text inputs</h3>
+            <input type="text" class="form-control" placeholder="Text input">
+            <div class="well"><span>emmet:
+                <pre><code>input.form-control[type="text" placeholder="Text input"]</code></pre>
+            </span></div>
+            <textarea class="form-control" rows="3" placeholder="Text area input"></textarea>
+            <div class="well"><span>emmet:
+                <pre><code>textarea.form-control[type="text" rows="3" placeholder="Text area input"]</code></pre>
+            </span></div>
+            <input type="password" class="form-control" placeholder="Password">
+            <div class="well"><span>emmet:
+                <pre><code>input.form-control[type="password" placeholder="Text input"]</code></pre>
+            </span></div>
+        </div>
+
+
+        <div class="col-sm-12">
+            <h3>Numbers</h3>
+            <input type="number" class="form-control">
+            <div class="well"><span>emmet:
+                <pre><code>input.form-control[type="number"]</code></pre>
+            </span></div>
+        </div>
+
+
+        <div class="col-sm-12">
+            <h3>Datepicker</h3>
+            <input type="date" class="form-control">
+            <div class="well"><span>emmet:
+                <pre><code>input.form-control[type="date"]</code></pre>
+            </span></div>
+        </div>
+
+        <div class="col-sm-12">
+            <h3>Color picker</h3>
+            <input type="color" class="form-control">
+            <div class="well"><span>emmet:
+                <pre><code>input.form-control[type="color"]</code></pre>
+            </span></div>
+        </div>
+
+        <div class="col-sm-12">
+            <h3>File control</h3>
+            <input type="file" class="form-control">
+            <div class="well"><span>emmet:
+                <pre><code>input.form-control[type="file"]</code></pre>
+            </span></div>
+        </div>
+
+        <!-- Checkboxes / radios -->
+        <div class="col-sm-12">
+            <h3>Checkboxes and radiobuttons</h3>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    Check 1
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    Check 2
+                </label>
+            </div>
+            <div class="checkbox disabled">
+                <label>
+                    <input type="checkbox" disabled value="">
+                    Check 3 disabled
+                </label>
+            </div>
+
+            <p>Inline checkboxes</p>
+            <div class="checkbox-inline"><label><input type="checkbox" value="">Check 1</label></div>
+            <div class="checkbox-inline"><label><input type="checkbox" value="">Check 2</label></div>
+            <div class="checkbox-inline"><label><input type="checkbox" value="">Check 3</label></div>
+            <div class="checkbox-inline"><label><input type="checkbox" value="">Check 4</label></div>
+
+            <div class="well"><span>emmet:
+                <pre><code>.checkbox>label>input[type="checkbox" value=""]+{Check 1}</code></pre>
+            </span>
+                <span>emmet disabled:
+                <pre><code>.checkbox.disabled>label>input[type="checkbox" disabled value=""]+{Check 1}</code></pre>
+            </span>
+                <span>emmet inline:
+                <pre><code>.checkbox-inline>label>input[type="checkbox" value=""]+{Check 1}</code></pre>
+            </span>
+                <div class="alert alert-warning" role="alert">
+                    Emmet produces a for="" attribute automatically even when not specifying it, other styles can act upon the existence of this
+                    attributes and will create an unwanted effect. Make sure to remove it after using it.
+                </div>
+            </div>
+
+
+            <div class="radio">
+                <label>
+                    <input type="radio" name="radios" id="radio1" value="opt1">
+                    Radio1
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="radios" id="radio2" value="opt2" checked>
+                    Radio2
+                </label>
+            </div>
+            <div class="radio disabled">
+                <label>
+                    <input type="radio" disabled name="radios" id="radio3" value="opt3">
+                    Radio3 is disabled
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="radios" id="radio4" value="opt4">
+                    Radio4
+                </label>
+            </div>
+
+            <p>Inline checkboxes</p>
+            <div class="radio-inline"><label><input type="radio" name="radios" id="radio1" value="opt1">Radiobutton 1</label></div>
+            <div class="radio-inline"><label><input type="radio" name="radios" id="radio2" value="opt2">Radiobutton 2</label></div>
+            <div class="radio-inline"><label><input type="radio" name="radios" id="radio3" value="opt3">Radiobutton 3</label></div>
+            <div class="radio-inline"><label><input type="radio" name="radios" id="radio4" value="opt4">Radiobutton 4</label></div>
+
+            <div class="well"><span>emmet:
+                <pre><code>.radio>label>input[type="radio" name="radios" id="radio1" value="opt1"]+{Radiobutton 1}</code></pre>
+            </span>
+                <span>emmet disabled:
+                <pre><code>.radio.disabled>label>input[type="radio" disabled name="radios" id="radio1" value="opt1"]+{Radiobutton 1}</code></pre>
+            </span>
+                <span>emmet inline:
+                <pre><code>.radio-inline>label>input[type="radio" name="radios" id="radio1" value="opt1"]+{Radiobutton 1}</code></pre>
+            </span>
+                <div class="alert alert-warning" role="alert">
+                    Emmet produces a for="" attribute automatically even when not specifying it, other styles can act upon the existence of this
+                    attributes and will create an unwanted effect. Make sure to remove it after using it.
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <h3>Dropdowns / selects</h3>
+            <select name="" id="" class="form-control">
+                <option value="">option 1</option>
+                <option value="">option 2</option>
+                <option value="">option 3</option>
+                <option value="">option 4</option>
+                <option value="">option 5</option>
+                <option value="">option 6</option>
+                <option value="">option 7</option>
+                <option value="">option 8</option>
+                <option value="">option 9</option>
+                <option value="">option 10</option>
+            </select>
+        </div>
+
+        <div class="col-sm-12">
+            <h5>Multiselect</h5>
+            <select name="" id="" class="form-control" multiple>
+                <option value="">option 1</option>
+                <option value="">option 2</option>
+                <option value="">option 3</option>
+                <option value="">option 4</option>
+                <option value="">option 5</option>
+                <option value="">option 6</option>
+                <option value="">option 7</option>
+                <option value="">option 8</option>
+                <option value="">option 9</option>
+                <option value="">option 10</option>
+            </select>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                <pre><code>select.form-control>option{option $}*10</code></pre>
+            </span>
+                <span>emmet multiple:
+                <pre><code>select.form-control[multiple]>option{option $}*10</code></pre>
+            </span></div>
+        </div>
+
+        <div class="col-sm-12">
+            <h2>Static text</h2>
+            <p>Sometimes helper text is required in a form, the static control can be used for just that. It only makes sense
+                with a label next to it however.</p>
+                <form class="soc-form">
+                    <div>
+                        <label>Email</label>
+                        <div>
+                            <p class="form-control-static">email@example.com</p>
+                        </div>
+                    </div>
+                </form>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                <pre><code>p.form-control-static{This is static}</code></pre>
+            </span></div>
+        </div>
+    </div>
+</div>

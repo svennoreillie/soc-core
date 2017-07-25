@@ -12,25 +12,25 @@
 </div>
 
 <div class="container-fluid">
-    <h2>Soc Tabs</h2>
+    <h2>Soc States</h2>
     <p>Tabs will generally be the first item on a content page providing a switch between different sections of the content
         provided.
     </p>
-    <p>It is recommended to follow up with a Soc Tab Header element.</p>
+    <p>It is recommended to follow up with a Soc Header element.</p>
 </div>
 
-<a name="soctabs"></a>
-<div class="btn-group btn-group-justified soc-tabgroup">
-    <div class="soc-tab">
+<a name="socstates"></a>
+<div class="btn-group btn-group-justified soc-stategroup">
+    <div class="soc-state">
         Aangevraagd
     </div>
-    <div class="soc-tab">
+    <div class="soc-state">
         Gevalideerd
     </div>
-    <div class="soc-tab active">
+    <div class="soc-state active">
         Gepland
     </div>
-    <div class="soc-tab">
+    <div class="soc-state">
         Uit te voeren
     </div>
 </div>
@@ -40,7 +40,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="well"><span>emmet:
-                <pre><code>.btn-group.btn-group-justified.soc-tabgroup>(.soc-tab{Tab $})*3+.soc-tab.active{Tab 4}+.soc-tab{Tab 5}</code></pre>
+                <pre><code>.btn-group.btn-group-justified.soc-stategroup>(.soc-state{State $})*3+.soc-state.active{State 4}+.soc-state{State 5}</code></pre>
             </span></div>
         </div>
     </div>
@@ -51,27 +51,27 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <a name="soctabheader"></a>
-            <h2>Soc Tab Header</h2>
-            <p>The Soc tab header is designed to be applied after the the Soc tab header, information can be layed out to the
-                right by using the soc-tab-header-right class. Apply the soc-tab-header-title class when a heavier font is
+            <a name="socheader"></a>
+            <h2>Soc Header</h2>
+            <p>The Soc header is designed to be applied after the the Soc States, information can be layed out to the
+                right by using the soc-header-right class. Apply the soc-header-title class when a heavier font is
                 required. (This element must exist outside the bootstrap container)
             </p>
         </div>
     </div>
 </div>
 
-<div class="soc-tab-header">
+<div class="soc-header">
     <div>
-        <span class="soc-tab-header-right">Leuven</span>
-        <span class="soc-tab-header-title">
+        <span class="soc-header-right">Leuven</span>
+        <span class="soc-header-title">
             <span class="soc-typography-name">Janssens</span> Marina
         <i class="fa fa-venus" aria-hidden="true"></i>
         </span>
     </div>
     <div>
         <span>89120125468</span>
-        <span class="soc-tab-header-right">304/00000468437</span>
+        <span class="soc-header-right">304/00000468437</span>
     </div>
 </div>
 
@@ -80,7 +80,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="well"><span>emmet:
-                <pre><code>.soc-tab-header>(div>span.soc-tab-header-right{Leuven}+span.soc-tab-header-title>span.soc-typography-name{Janssens }+{ Marina}+i.fa.fa-venus[aria-hidden="true"])+div>span{89120125468}+span.soc-tab-header-right{304/00000468437}</code></pre>
+                <pre><code>.soc-header>(div>span.soc-header-right{Leuven}+span.soc-header-title>span.soc-typography-name{Janssens }+{ Marina}+i.fa.fa-venus[aria-hidden="true"])+div>span{89120125468}+span.soc-header-right{304/00000468437}</code></pre>
             </span></div>
         </div>
     </div>
@@ -92,25 +92,25 @@
     </div>
 </div>
 
-<div class="btn-group btn-group-justified soc-tabgroup">
-    <div class="soc-tab">
+<div class="btn-group btn-group-justified soc-stategroup">
+    <div class="soc-state">
         Aangevraagd
     </div>
-    <div class="soc-tab">
+    <div class="soc-state">
         Gevalideerd
     </div>
 </div>
-<div class="soc-tab-header">
+<div class="soc-header">
     <div>
-        <span class="soc-tab-header-right">New York</span>
-        <span class="soc-tab-header-title">
+        <span class="soc-header-right">New York</span>
+        <span class="soc-header-title">
             <span class="soc-typography-name">Johnson</span> Tiger
         <i class="fa fa-mars" aria-hidden="true"></i>
         </span>
     </div>
     <div>
         <span>77122525444</span>
-        <span class="soc-tab-header-right">311/00000468517</span>
+        <span class="soc-header-right">311/00000468517</span>
     </div>
 </div>
 

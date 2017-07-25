@@ -1,42 +1,70 @@
-.soc-tabgroup {
-    padding: 10px;
-    background-color: $soc-accent-color;
-
-    >.soc-tab {
-        @extend .btn;
-        @extend .btn-default;
-        padding: 3px;
-        margin: 10px 0;
-        background-color: $soc-base-color;
-
-        &:first-child {
-            border-bottom-left-radius: 6px;
-            border-top-left-radius: 6px;
+.soc-tabs {
+    background-color: $soc-body-bg-color;
+    color: $soc-body-color;
+    .nav-tabs {
+        border-bottom: none;
+        >li {
+            >a {
+                &:hover {
+                    border-color: transparent;
+                }
+            }
         }
-
-        &:last-child {
-            border-bottom-right-radius: 6px;
-            border-top-right-radius: 6px;
+    }
+    &.left {
+        .nav-tabs {
+            float: left;
+            margin-right: 19px;
+            width: 20%;
+            >li {
+                float: none;
+                margin-bottom: 0;
+                >a {
+                    border-right: transparent;
+                    margin-right: -1px;
+                }
+                &.active {
+                    >a {
+                        border: 1px solid #e7eaec;
+                        border-right: transparent;
+                    }
+                }
+            }
         }
-
-        &.active {
-            background-color: darken($soc-base-color, 15%);
+        .tab-pane {
+            width: 80%;
+            margin-left: 20%;
         }
+    }
+    &:not(.left) {
+        
+        .nav-tabs {
+            >li {
+                >a {
+                    border-bottom: transparent;
+                    margin-bottom: -1px;
+                }
+                &.active {
+                    >a {
+                        border: 1px solid #e7eaec;
+                        border-bottom: transparent;
+                    }
+                }
+            }
+        }
+    }
+    .tab-pane {
+        background-color: white;
+        color: black;
+        border: 1px solid #e7eaec;
+        padding: 15px;
     }
 }
 
-.soc-tab-header {
-    background-color:   $soc-accent-color;
-    color:              $soc-accent-text-color;
-    font-size:          120%;
-    padding:            10px;
-
-    .soc-tab-header-title {
-        font-weight: bold;
-    }
-
-    .soc-tab-header-right {
-        @extend .text-right;
-        @extend .pull-right;
+.soc-header,
+.soc-stategroup {
+    +.soc-tabs {
+        background-color: $soc-accent-color;
+        color: $soc-accent-text-color;
     }
 }

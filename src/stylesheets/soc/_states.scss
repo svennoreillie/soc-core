@@ -1,0 +1,42 @@
+.soc-stategroup {
+    padding: 10px;
+    background-color: $soc-accent-color;
+
+    >.soc-state {
+        @extend .btn;
+        @extend .btn-default;
+        padding: 3px;
+        margin: 10px 0;
+        background-color: $soc-base-color;
+
+        &:first-child {
+            border-bottom-left-radius: 6px;
+            border-top-left-radius: 6px;
+        }
+
+        &:last-child {
+            border-bottom-right-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+
+        &.active {
+            background-color: darken($soc-base-color, 15%);
+        }
+    }
+}
+
+.soc-header {
+    background-color:   $soc-accent-color;
+    color:              $soc-accent-text-color;
+    font-size:          120%;
+    padding:            10px;
+
+    .soc-header-title {
+        font-weight: bold;
+    }
+
+    .soc-header-right {
+        @extend .text-right;
+        @extend .pull-right;
+    }
+}

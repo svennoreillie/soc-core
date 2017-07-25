@@ -17,11 +17,13 @@
                 <li>Wrap label and its corresponding input element in a div</li>
                 <li>Wrap the input element in a div as well</li>
                 <li>Add one or more buttons at the end of the form</li>
-                <li>It is recommended to always combine inputs with labels because screen readers might have trouble with the form if they are
-                omitted</li>
+                <li>It is recommended to always combine inputs with labels because screen readers might have trouble with the
+                    form if they are omitted
+                </li>
                 <li>Don't apply css classes to any of the elements within the form</li>
             </ul>
-            <p>Style options are available to change details of the form. Use the following classes next to 'soc-form' to change the form:</p>
+            <p>Style options are available to change details of the form. Use the following classes next to 'soc-form' to change
+                the form:</p>
             <ul>
                 <li>'inline': Creates a compact inline form</li>
                 <li>'compact': Uses narrower elements (cannot be used together with inline)</li>
@@ -112,12 +114,11 @@
                 <button class="btn-danger">Cancel</button>
             </form>
         </div>
-        
+
         <div class="col-sm-12">
             <div class="well"><span>emmet:
                 <pre><code>form.soc-form.compact.btn-left>(div>(label[for="i$"]{Label $}+div>input#i$[type="text" placeholder="item $"]))*4+button[type="submit"]{Save}+button.btn-danger{Cancel}</code></pre>
             </span></div>
         </div>
     </div>
-
 </div>

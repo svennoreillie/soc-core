@@ -13,11 +13,18 @@ $(document).ready(function () {
     //Loading navigation content 
     $("#navbarContent").load("elements/navigation.html", navbarCompleted);
     $("#sidebarContent").load("elements/sidebar.html", sidebarCompleted);
+
+
+    $("#socforms").load("elements/components_forms.html");
+    $("#socformelements").load("elements/components_formelements.html");
+    $("#soctabs").load("elements/components_tabs.html");
+
     $("#socComponentContent").load("elements/components_soc.html", socCompleted);
     $("#typographyContent").load("elements/typography.html");
     $("#gridContent").load("elements/grid.html");
     $("#documentationInfo").load("elements/documentation_generalinfo.html");
     $("#socforms").load("elements/components_forms.html");
+    $("#socformelements").load("elements/components_formelements.html");
     
 
 
