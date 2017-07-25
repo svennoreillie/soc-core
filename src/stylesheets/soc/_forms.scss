@@ -1,0 +1,106 @@
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid';
+form.soc-form {
+    /* Variables for soc form */
+    $label-col-size: 2;
+    $label-align: right;
+    >div {
+        /* Shorthand for eleminating bootstrap classes -> first div is always a form-group */
+        @extend .form-group;
+    }
+    >button {
+        @extend .btn;
+        float: right;
+        margin-left: 5px;
+    }
+    input {
+        @extend .form-control;
+    }
+    &.btn-left {
+        >button {
+            float: left;
+        }
+    }
+    &.hidden-labels {
+        label {
+            @extend .sr-only;
+        }
+    }
+    &.compact {
+        > div {
+            @extend .form-group;
+            @extend .form-group-sm;
+            margin-bottom: 3px;
+        }
+    }
+    &.inline {
+        @extend .form-inline;
+        >div {
+            display: inline-block;
+            >div {
+                display: inline-block;
+            }
+        }
+    }
+    &:not(.inline) {
+        /* Soc forms are horizontal on large screens and vertical on smaller, inline overrides this feature */
+        @media (min-width: $screen-md-min) {
+            /* horizontal bootstrap form when screen is large */
+            // Consistent vertical alignment of radios and checkboxes
+            //
+            // Labels also get some reset styles, but that is scoped to a media query below.
+            .radio, .checkbox, .radio-inline, .checkbox-inline {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+            } // Account for padding we're adding to ensure the alignment and of help text
+            // and other content below items
+            .radio,
+            .checkbox {
+                min-height: ($line-height-computed + ($padding-base-vertical + 1));
+            } // Make form groups behave like rows
+            >div {
+                /* Shorthand for eleminating bootstrap classes -> first div is always a form-group */
+                @include make-row;
+                >div {
+                    /* Shorthand for eleminating bootstrap classes -> inner div is for column setting */
+                    @include make-md-column(12 - $label-col-size, $gutter: $grid-gutter-width);
+                }
+            } // Reset spacing and right align labels, but scope to media queries so that
+            // labels on narrow viewports stack the same as a default form example.
+            @media (min-width: $screen-sm-min) {
+                label {
+                    @include make-md-column($label-col-size, $gutter: $grid-gutter-width);
+                    text-align: $label-align;
+                    margin-bottom: 0;
+                    padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+                }
+            } // Validation states
+            //
+            // Reposition the icon because it's now within a grid column and columns have
+            // `position: relative;` on them. Also accounts for the grid gutter padding.
+            .has-feedback .form-control-feedback {
+                right: floor(($grid-gutter-width / 2));
+            } // Form group sizes
+            //
+            // Quick utility class for applying `.input-lg` and `.input-sm` styles to the
+            // inputs and labels within a `.form-group`.
+            .form-group-lg {
+                @media (min-width: $screen-sm-min) {
+                    .control-label {
+                        padding-top: ($padding-large-vertical + 1);
+                        font-size: $font-size-large;
+                    }
+                }
+            }
+            .form-group-sm {
+                @media (min-width: $screen-sm-min) {
+                    .control-label {
+                        padding-top: ($padding-small-vertical + 1);
+                        font-size: $font-size-small;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+<a name="socforms"></a>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="page-header">
+                <h1>Soc Forms <small>Simple form styling</small></h1>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <p>Soc Forms are built upon the Bootstrap form style. The 'soc-form' is simplified however, in stead of using different
+                bootstrap classes to style your form, only a single 'soc-form' class must be added to the form element. This
+                will create a horizontal form on large screens and change itself to a vertical one on smaller devices.</p>
+            <p>Guidelines for implementation</p>
+            <ul>
+                <li>Wrap entire form in a form element with the 'soc-form' class set</li>
+                <li>Wrap label and its corresponding input element in a div</li>
+                <li>Wrap the input element in a div as well</li>
+                <li>Add one or more buttons at the end of the form</li>
+                <li>It is recommended to always combine inputs with labels because screen readers might have trouble with the form if they are
+                omitted</li>
+                <li>Don't apply css classes to any of the elements within the form</li>
+            </ul>
+            <p>Style options are available to change details of the form. Use the following classes next to 'soc-form' to change the form:</p>
+            <ul>
+                <li>'inline': Creates a compact inline form</li>
+                <li>'compact': Uses narrower elements (cannot be used together with inline)</li>
+                <li>'btn-left': Places the buttons on the left hand side</li>
+                <li>'hidden-labels': Removes the labels from screen but keeps them for screenreaders</li>
+            </ul>
+        </div>
+
+        <div class="col-sm-12">
+            <h3>Regular form</h3>
+            <form action="" class="soc-form">
+                <div>
+                    <label for="i1">Label 1</label>
+                    <div><input type="text" id="i1" placeholder="item 1"></div>
+                </div>
+                <div>
+                    <label for="i2">Longer labels will wrap when they can't fit the page</label>
+                    <div><input type="text" id="i2" placeholder="item 2"></div>
+                </div>
+                <div>
+                    <label for="i3">Label 3</label>
+                    <div><input type="text" id="i3" placeholder="item 3"></div>
+                </div>
+                <div>
+                    <label for="i4">Label 4</label>
+                    <div><input type="text" id="i4" placeholder="item 4"></div>
+                </div>
+                <button class="btn-danger">Cancel</button>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                <pre><code>form.soc-form>(div>(label[for="i$"]{Label $}+div>input#i$[type="text" placeholder="item $"]))*4+button[type="submit"]{Save}</code></pre>
+            </span></div>
+        </div>
+
+        <div class="col-sm-12">
+            <h3>Inline form with hidden labels</h3>
+            <form action="" class="soc-form inline hidden-labels">
+                <div>
+                    <label for="i1">Label 1</label>
+                    <div><input type="text" id="i1" placeholder="item 1"></div>
+                </div>
+                <div>
+                    <label for="i2">Label 2</label>
+                    <div><input type="text" id="i2" placeholder="item 2"></div>
+                </div>
+                <div>
+                    <label for="i3">Label 3</label>
+                    <div><input type="text" id="i3" placeholder="item 3"></div>
+                </div>
+                <div>
+                    <label for="i4">Label 4</label>
+                    <div><input type="text" id="i4" placeholder="item 4"></div>
+                </div>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                <pre><code>form.soc-form.inline.hidden-labels>(div>(label[for="i$"]{Label $}+div>input#i$[type="text" placeholder="item $"]))*4+button[type="submit"]{Save}</code></pre>
+            </span></div>
+        </div>
+
+        <div class="col-sm-12">
+            <h3>Compact form with buttons on the left</h3>
+            <form class="soc-form compact btn-left">
+                <div>
+                    <label for="i1">Label 1</label>
+                    <div><input type="text" id="i1" placeholder="item 1"></div>
+                </div>
+                <div>
+                    <label for="i2">Label 2</label>
+                    <div><input type="text" id="i2" placeholder="item 2"></div>
+                </div>
+                <div>
+                    <label for="i3">Label 3</label>
+                    <div><input type="text" id="i3" placeholder="item 3"></div>
+                </div>
+                <div>
+                    <label for="i4">Label 4</label>
+                    <div><input type="text" id="i4" placeholder="item 4"></div>
+                </div>
+                <button type="submit">Save</button>
+                <button class="btn-danger">Cancel</button>
+            </form>
+        </div>
+        
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                <pre><code>form.soc-form.compact.btn-left>(div>(label[for="i$"]{Label $}+div>input#i$[type="text" placeholder="item $"]))*4+button[type="submit"]{Save}+button.btn-danger{Cancel}</code></pre>
+            </span></div>
+        </div>
+    </div>
+
+</div>
