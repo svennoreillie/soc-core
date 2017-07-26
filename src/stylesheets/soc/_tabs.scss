@@ -1,6 +1,6 @@
 .soc-tabs {
-    background-color: $soc-body-bg-color;
-    color: $soc-body-color;
+    background-color: $soc-tab-bg-color;
+    color: $soc-tab-color;
     .nav-tabs {
         border-bottom: none;
         >li {
@@ -8,14 +8,17 @@
                 &:hover {
                     border-color: transparent;
                 }
+                &.active {
+                    color: $soc-body-color;
+                }
+                color: $soc-tab-color;
             }
         }
     }
-    &.left {
+    &:not(.top) {
         .nav-tabs {
-            float: left;
-            margin-right: 19px;
-            width: 20%;
+            float: left; //margin-right: 19px;
+            width: $soc-tabs-left-width-percent;
             >li {
                 float: none;
                 margin-bottom: 0;
@@ -25,19 +28,18 @@
                 }
                 &.active {
                     >a {
-                        border: 1px solid #e7eaec;
+                        border: 1px solid $soc-tab-border-color;
                         border-right: transparent;
                     }
                 }
             }
         }
         .tab-pane {
-            width: 80%;
-            margin-left: 20%;
+            width: 100% - $soc-tabs-left-width-percent;
+            margin-left: $soc-tabs-left-width-percent;
         }
     }
-    &:not(.left) {
-        
+    &.top {
         .nav-tabs {
             >li {
                 >a {
@@ -46,7 +48,7 @@
                 }
                 &.active {
                     >a {
-                        border: 1px solid #e7eaec;
+                        border: 1px solid $soc-tab-border-color;
                         border-bottom: transparent;
                     }
                 }
@@ -54,17 +56,29 @@
         }
     }
     .tab-pane {
-        background-color: white;
-        color: black;
-        border: 1px solid #e7eaec;
-        padding: 15px;
+        background-color: $soc-body-bg-color;
+        color: $soc-body-color;
+        border: 1px solid $soc-tab-border-color;
+        padding-top: 15px;
     }
 }
 
 .soc-header,
 .soc-stategroup {
-    +.soc-tabs {
+    +.soc-tabs:not(.inconsistent) {
         background-color: $soc-accent-color;
         color: $soc-accent-text-color;
+        .nav-tabs {
+            >li {
+                >a {
+                    color: $soc-accent-text-color;
+                }
+                &.active {
+                    >a {
+                        color: $soc-body-color;
+                    }
+                }
+            }
+        }
     }
 }

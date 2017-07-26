@@ -19,7 +19,7 @@ $soc-transition-timing-multiplier: 2 !default;
 ////////////////////////
 
 //Colors
-$soc-base-color:                #F6F6F6 !default;
+$soc-base-color:                white !default;
 $soc-base-text-color:           black !default;
 $soc-navigation-color:          #f8f8f8 !default;
 $soc-navigation-text-color:     #333 !default;
@@ -45,6 +45,12 @@ $color-filter-10:		$soc-color-10;
 //General
 $soc-body-bg-color:         $soc-base-color;
 $soc-body-color:            $soc-base-text-color;
+
+//Tabs
+$soc-tab-bg-color:              #f8f8f8 !default;
+$soc-tab-color:                 #666 !default;
+$soc-tab-border-color:          #e7eaec !default;
+$soc-tabs-left-width-percent:   20%;
 
 //Sidebar
 $soc-sidebar-width:                     300px  !default;
