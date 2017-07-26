@@ -82,3 +82,10 @@
         }
     }
 }
+
+/* full height if used within main-content */
+.soc-main-content {
+    >.soc-tabs {
+        height: 100%;
+    }
+}
