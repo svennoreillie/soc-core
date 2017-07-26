@@ -11,7 +11,7 @@ Soc is an in-house developed front end framework in order to maintain a similar 
 ## Setup
 ### Installing prerequisites
 * Download and install [git](http://nodejs.org/download/) for your OS 
-* Donwload [nodeJS](http://nodejs.org/download/) for your OS and install. Check by running 'node -v' in a terminal window.
+* Download [nodeJS](http://nodejs.org/download/) for your OS and install. Check by running 'node -v' in a terminal window.
 * npm should come installed with node, check by running 'npm -v'
 * Because npm is more frequently updated than node, update it by running 'npm install npm@latest -g'
 
@@ -59,7 +59,7 @@ After this you can navigate to 'http://localhost:8080' (or a different port if t
 The project is setup to be a live session, meaning changes made in code will automatically trigger a refresh in the browser.
 
 ### Guidelines
-The project contains all of its source files int the src folder split into seperate folders based on the type of file. 
+The project contains all of its source files int the src folder split into separate folders based on the type of file. 
 
 #### Sass files
 Sass files belong in the stylesheets folder. Keep these clean as this is the core of the project. We opted to work with a soc.scss file importing all the partial files which are divided based on the feature or element they style.
