@@ -27,15 +27,18 @@ A browser should open containing the contents of the built soc-core project
 
 
 ### Documentation
-Currently, documentation of the various components can be found in the examples which are located in the src/html folder of this project. We hope to extend the docs in a later stage of the project.
+Currently, documentation of the various components can be found in the example website which is located in the src/html folder of this project. We hope to extend the docs in a later stage of the project.
 
 
 ### Using soc-core in your own project
+Soc-core is built for use with webpack but can be used without it as well. However, without webpack some overhead might exist because of double use of javascript frameworks as we embed them into our bundle files
+##### Using it without webpack
 1. Change directory to root of your project in a terminal
 2. Run 'npm install soc-core --save-dev'
 3. Include 'shared.bundle.js', 'vendor.bundle.js' and 'app.bundle.js' as well as 'soc-core.css' in your website
 4. Check documentation to get started
 5. View html examples in the src/html folder
+
 
 
 ## Contribution guidelines
