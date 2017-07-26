@@ -7,8 +7,8 @@ module.exports = {
     entry: {
         sitespecific: './src/javascripts/site-specific',
         app: './src/javascripts/soc-core',
-        vendor: './src/javascripts/vendor',
-        css: './src/stylesheets/soc.scss'
+        vendor: ["jquery", "bootstrap-sass", "toastr"],
+        css: './src/stylesheets/soc.scss',
     },
 
     output: {
@@ -18,7 +18,7 @@ module.exports = {
 
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'shared'
+            name: 'vendor'
         }),
         new extractText({
             filename: 'soc-core.css',

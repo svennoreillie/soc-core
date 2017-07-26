@@ -1,4 +1,6 @@
+import bootstrap from 'bootstrap-sass';
 import $ from 'jquery';
+import toastr from 'toastr';
 
 $(document).ready(function () {
 

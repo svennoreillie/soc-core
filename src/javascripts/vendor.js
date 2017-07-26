@@ -2,5 +2,5 @@
 
 // global.jQuery = $;
 import bootstrap from 'bootstrap-sass';
-import jQuery from 'jquery';
+import $ from 'jquery';
 import toastr from 'toastr';
