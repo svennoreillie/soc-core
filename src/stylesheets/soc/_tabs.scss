@@ -61,6 +61,13 @@
         border: 1px solid $soc-tab-border-color;
         padding-top: 15px;
     }
+
+    &.full-height {
+        height: 100%;
+        >.nav-tabs {
+            height: 100%;
+        }
+    }
 }
 
 .soc-header,
@@ -79,16 +86,6 @@
                     }
                 }
             }
-        }
-    }
-}
-
-/* full height if used within main-content */
-.soc-main-content {
-    >.soc-tabs {
-        height: 100%;
-        >.nav-tabs {
-            height: 100%;
         }
     }
 }
