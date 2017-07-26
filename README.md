@@ -83,11 +83,8 @@ _templatevariables.scss
 $soc-base-color:                white;
 $soc-base-text-color:           black;
 $soc-navigation-color:          #eee;
-
-////////////////////////////////////////////////////////////////////////////////////////
-The available template variables will change over time. check src/stylesheets/_templatevariables.scss in the soc-core project for an actual overview
-////////////////////////////////////////////////////////////////////////////////////////
 ```
+Warning: The available template variables shown above are not complete and will change over time. check src/stylesheets/_templatevariables.scss in the soc-core project for an actual overview
 
 If you are following the names given in the rest of this small tutorial, name the main scss file 'test.scss' and place the scss files in the src/stylesheets folder.
 
