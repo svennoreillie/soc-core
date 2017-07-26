@@ -1,6 +1,6 @@
 {
   "name": "soc-core",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Core sass framework based on Bootstrap",
   "main": "src/javascripts/soc-core.js",
   "files": [
