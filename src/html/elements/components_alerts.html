@@ -1,0 +1,56 @@
+<a name="toaster"></a>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-header">
+                <h1>Soc Alerts <small>Information blocks or disaster announcements
+                    <span class="label label-success">Continue grid</span>
+                    <span class="label label-default">Wrap</span>
+                    <span class="label label-warning">JS</span>    
+                </small></h1>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="alert alert-success" role="alert">
+                <strong>Success!</strong> Everything is alright
+            </div>
+            <div class="alert alert-info" role="alert">
+                <strong>Informational</strong> It might have worked, but maybe check some things
+            </div>
+            <div class="alert alert-warning" role="alert">
+                <strong>Warning!</strong> Looks innocent, but probably went wrong underneath
+            </div>
+            <div class="alert alert-danger" role="alert">
+                <strong>Error!</strong> Run
+            </div>
+            <hr/>
+            <p>Dismissable alert</p>
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Warning!</strong> Better check it
+            </div>
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Error!</strong> Action failed
+            </div>
+            <hr/>
+            <p>Links in alerts</p>
+            <div class="alert alert-info" role="alert">
+                <strong>Informational</strong> It might have worked, but maybe check some <a href="#" class="alert-link">things</a>
+            </div>
+
+            <div class="well">
+                <span>emmets:
+                                <pre><code>.alert.alert-success>strong{success}+{ Everything is alright}</code></pre>
+                                <pre><code>.alert.alert-info>strong{info}+{ Everything is alright}</code></pre>
+                                <pre><code>.alert.alert-warning>strong{warning}+{ Everything is alright}</code></pre>
+                                <pre><code>.alert.alert-danger>strong{danger}+{ Everything is alright}</code></pre>
+                            </span>
+                <span>Dismissible emmet:
+                                <pre><code>.alert.alert-danger.alert-dismissible>button.close[type="button" data-dismiss="alert" aria-label="Close"]>span[aria-hidden="true"]{&times;}^strong{danger}+{ Everything is alright}</code></pre>
+                            </span>
+            </div>
+        </div>
+    </div>
+</div>

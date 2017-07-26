@@ -7,34 +7,37 @@ $(document).ready(function () {
         setActiveLinks();
         navbarCompleted();
         sidebarCompleted();
-        socCompleted();
     }
 
     //Loading navigation content 
     $("#navbarContent").load("elements/navigation.html", navbarCompleted);
     $("#sidebarContent").load("elements/sidebar.html", sidebarCompleted);
 
-
-    $("#socforms").load("elements/components_forms.html");
-    $("#socformelements").load("elements/components_formelements.html");
-    $("#soctabs").load("elements/components_tabs.html");
-
-    $("#socComponentContent").load("elements/components_soc.html", socCompleted);
+    $("#documentationInfo").load("elements/documentation_generalinfo.html");
     $("#typographyContent").load("elements/typography.html");
     $("#gridContent").load("elements/grid.html");
-    $("#documentationInfo").load("elements/documentation_generalinfo.html");
+
+    $("#socstates").load("elements/components_states.html");
+    $("#socheader").load("elements/components_header.html");
+    $("#soctabs").load("elements/components_tabs.html");
+    $("#socpanel").load("elements/components_panel.html", panelscompleted);
+    $("#soctable").load("elements/components_table.html");
+
     $("#socforms").load("elements/components_forms.html");
     $("#socformelements").load("elements/components_formelements.html");
-    
 
+    $("#socnotfound").load("elements/page_notfound.html");
+    $("#socloading").load("elements/page_loading.html", loadercompleted);
 
-    $("#bootstrapComponentContent").load("elements/components_bootstrap.html", bootstrapCompleted);
+    $("#socalerts").load("elements/components_alerts.html");
+    $("#toaster").load("elements/components_toaster.html", toastcompleted);
+
 
     //Url changes
     $(window).on('hashchange', setActiveLinks);
 
     //Privates
-    function bootstrapCompleted() {
+    function toastcompleted() {
         $("#toastBtn_info").click(function (e) {
             toastr.info('Toasts are so much more than regular bread!')
         });
@@ -49,15 +52,7 @@ $(document).ready(function () {
         });
     }
 
-    function setActiveLinks() {
-        //remove all actives
-        $(".navbar a").parent("li").removeClass("active");
-
-        var hash = window.location.hash;
-        $("[href='" + hash + "']").parent("li").addClass("active");
-    }
-
-    function socCompleted() {
+    function loadercompleted() {
         $("#showLoaderBtn").click(function (e) {
             $(".soc-page").addClass("is-loading");
 
@@ -65,12 +60,22 @@ $(document).ready(function () {
                 $(".soc-page").removeClass("is-loading");
             }, 5000);
         });
+    }
 
+    function panelscompleted() {
         $(".soc-collapser").click(function (event) {
             event.preventDefault();
             var panel = $(this).parents(".soc-panel").first();
             panel.toggleClass("collapsed");
         });
+    }
+
+    function setActiveLinks() {
+        //remove all actives
+        $(".navbar a").parent("li").removeClass("active");
+
+        var hash = window.location.hash;
+        $("[href='" + hash + "']").parent("li").addClass("active");
     }
 
     function navbarCompleted() {

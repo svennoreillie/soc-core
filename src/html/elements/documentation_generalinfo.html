@@ -2,12 +2,16 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="page-header">
-                <h1>Soc-core documentation <small>General information</small></h1>
+                <h1>Soc-core <small>General information</small></h1>
             </div>
         </div>
         <div class="col-sm-12">
             <p>Soc-core is a Sass framework providing styling for base elements of Soc style, an in-house developed front end
-                framework in order to maintain a similar look and feel for all kinds of administrative websites.</p>
+                framework in order to maintain a similar look and feel for all kinds of administrative websites. Soc-core
+                is built on top of the official Bootstrap Sass port, this allows for all known Bootstrap components and style
+                elements to be used as well. Some of these might have been overridden by the Soc-core style but efforts were
+                made to keep this limited as much as possible. For more information visit the <a href="http://getbootstrap.com"
+                    alt="bootstrap">bootstrap</a> website.</p>
             <p>This website is developed to provide examples and documentation of the various components. To use a component
                 you can either look at the source and alter the code to fit your needs, or run the emmet snippet provided
                 below the component in a well if your IDE provides support for <a href="https://emmet.io/" target="blank">emmet</a>.
@@ -16,10 +20,25 @@
         </div>
 
         <div class="col-sm-12">
+            <h3>Emmet snippets</h3>
             <div class="well">
                 <p>This is an example of a well containing an emmet snippet.</p>
                 <span>emmet:<pre><code>div.well>span{Emmet code:}>pre>code{This is some code}</code></pre></span>
             </div>
+        </div>
+
+        <div class="col-sm-12">
+            <a name="infolabels"></a>
+            <h3>Info labels</h3>
+            <p>Throughout the documentation and example pages you might find some labels being applied. A description of the
+                labels can be found here.</p>
+            <p><span class="label label-primary">No container</span>&nbsp;Use outside bootstrap container for best results.</p>
+            <p><span class="label label-success">Continue grid</span>&nbsp;To have best results, continue with bootstrap container
+                and use the grid system.</p>
+            <p><span class="label label-default">Wrap</span>&nbsp;This component is a wrapper element, for best results it should
+                contain elements inside it.</p>
+            <p><span class="label label-warning">JS</span>&nbsp;This features requires javascript, make sure to add the bundle
+                files to the document.</p>
         </div>
     </div>
 </div>

@@ -1,0 +1,45 @@
+<a name="socstates"></a>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="page-header">
+                <h1>Soc States <small>Transitions
+                    <span class="label label-success">Continue grid</span>
+                    <span class="label label-primary">No container</span>
+                </small></h1>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <p>States will generally be the first item on a content page providing a switch between different sections of the
+                content provided. It is recommended to follow up with a Soc Header element.</p>
+        </div>
+    </div>
+</div>
+
+<div class="btn-group btn-group-justified soc-stategroup">
+    <div class="soc-state">
+        Requested
+    </div>
+    <div class="soc-state">
+        Validated
+    </div>
+    <div class="soc-state active">
+        Planned
+    </div>
+    <div class="soc-state">
+        Waiting for execution
+    </div>
+    <div class="soc-state">
+        Executed
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                <pre><code>.btn-group.btn-group-justified.soc-stategroup>(.soc-state{State $})*3+.soc-state.active{State 4}+.soc-state{State 5}</code></pre>
+            </span></div>
+        </div>
+    </div>
+</div>

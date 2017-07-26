@@ -1,0 +1,74 @@
+<a name="socheader"></a>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="page-header">
+                <h1>Soc Header <small>Major information holder
+                    <span class="label label-success">Continue grid</span>
+                    <span class="label label-default">Wrap</span>
+                    <span class="label label-primary">No container</span>
+                </small></h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <p>The Soc header is designed to be applied after the the Soc States, information can be layed out to the right by using
+            the soc-header-right class. Apply the soc-header-title class when a heavier font is required. </p>
+        <p>The first example is the Soc header by itself, the second is the header combined with a Soc states element.</p>
+    </div>
+</div>
+
+<div class="soc-header">
+    <div>
+        <span class="soc-header-right">Leuven</span>
+        <span class="soc-header-title">
+            <span class="soc-typography-name">Janssens</span> Marina
+        <i class="fa fa-venus" aria-hidden="true"></i>
+        </span>
+    </div>
+    <div>
+        <span>89120125468</span>
+        <span class="soc-header-right">304/00000468437</span>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="well"><span>emmet:
+                <pre><code>.soc-header>(div>span.soc-header-right{Leuven}+span.soc-header-title>span.soc-typography-name{Janssens }+{ Marina}+i.fa.fa-venus[aria-hidden="true"])+div>span{89120125468}+span.soc-header-right{304/00000468437}</code></pre>
+            </span></div>
+        </div>
+        <div class="col-sm-12">
+            <h3>Example with states</h3>
+        </div>
+    </div>
+</div>    
+
+<div class="btn-group btn-group-justified soc-stategroup">
+    <div class="soc-state active">
+        State 1
+    </div>
+    <div class="soc-state">
+        State 2
+    </div>
+    <div class="soc-state">
+        State 3
+    </div>
+    <div class="soc-state">
+        State 4
+    </div>
+</div>
+<div class="soc-header">
+    <div>
+        <span class="soc-header-right">New York</span>
+        <span class="soc-header-title">
+            <span class="soc-typography-name">Johnson</span> Tiger
+        <i class="fa fa-mars" aria-hidden="true"></i>
+        </span>
+    </div>
+    <div>
+        <span>77122525444</span>
+        <span class="soc-header-right">311/00000468517</span>
+    </div>
+</div>
