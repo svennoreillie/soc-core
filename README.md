@@ -32,12 +32,136 @@ Currently, documentation of the various components can be found in the example w
 
 ### Using soc-core in your own project
 Soc-core is built for use with webpack but can be used without it as well. However, without webpack some overhead might exist because of double use of javascript frameworks as we embed them into our bundle files
+
 ##### Using it without webpack
 1. Change directory to root of your project in a terminal
 2. Run 'npm install soc-core --save-dev'
 3. Include 'shared.bundle.js', 'vendor.bundle.js' and 'app.bundle.js' as well as 'soc-core.css' in your website
 4. Check documentation to get started
 5. View html examples in the src/html folder
+
+##### Using it with webpack
+A demo project has been set up to show how to use soc-core in your own website. It contains a webpage with a navbar, sidebar and some content copied from the examples page. 
+
+Below is the full explanation of required files to do this 
+* TL;DR Try the quick look at https://github.com/svennoreillie/soc-core-sample
+
+##### Create a project.json file
+Create a new folder and run 'npm init' in a terminal window at the root of the project.
+Answer the questions asked until created. 
+
+##### Install soc-core
+Add soc-core to the dependencies by running 'npm install soc-core' in a terminal at the root of your project
+
+##### Install webpack
+Webpack is an npm package so install it in your devDependencies by running 'npm install --save-dev webpack'. Do the same for the following webpack loaders and plugins:
+
+* css-loader
+* sass-loader
+    * sass-loader requires node-sass to be installed as well
+* extract-text-webpack-plugin
+
+it is also handy to install the dev server by running 'npm install --save-dev webpack-dev-server'.
+
+##### Create your own sass style
+Based upon the soc-core style. To do this create 2 files, a {your project}.scss file and a _templatevariables.scss file containing at least the following:
+
+
+{your project}.scss
+```Sass
+//Set our own variables first, these can override the bootstrap variables
+@import "templatevariables";
+
+//import soc-core
+@import "~soc-core/src/stylesheets/soc.scss";
+
+//Add custom scss below
+```
+
+_templatevariables.scss
+```Sass
+$soc-base-color:                white;
+$soc-base-text-color:           black;
+$soc-navigation-color:          #eee;
+
+////////////////////////////////////////////////////////////////////////////////////////
+The available template variables will change over time. check src/stylesheets/_templatevariables.scss in the soc-core project for an actual overview
+////////////////////////////////////////////////////////////////////////////////////////
+```
+
+If you are following the names given in the rest of this small tutorial, name the main scss file 'test.scss' and place the scss files in the src/stylesheets folder.
+
+##### Add some javascript
+Use the features of webpack to start quickly with your file. The idea is that you import the soc-core javascript files which were also bundled in advance. This is quite simple and only requires the following line
+
+```javascript
+import soc from 'soc-core';
+```
+
+This line will import the main file defined in the project json of a package named soc-core. As soc-core also imports toastr, jquery and bootstrap these will be imported automatically as well. 
+
+More scripting can of course be done as well. For this demo this is not required so we keep it at one line. If you are following the tutorial, you should put this line in a test.js file in the src/javascripts folder.
+
+##### Setup webpack
+Create a webpack.config.js file in the root of your project and paste in the following contents
+```javascript 
+var extractText = require('extract-text-webpack-plugin');
+
+module.exports = {
+    entry: {
+        app: './src/javascripts/test',
+        css: './src/stylesheets/test.scss'
+    },
+
+    output: {
+        filename: './dist/[name].bundle.js'
+    },
+    devtool: 'source-map',
+    module: {
+        loaders: [{
+            test: /\.scss$/,
+            loader: extractText.extract('css-loader!sass-loader?sourceMap')
+        }]
+    },
+
+    plugins: [
+        new extractText({
+            filename: 'dist/test.css',
+            disable: false,
+            allChunks: true
+        }),
+    ]
+};
+```
+This is a basic setup of webpack, it tells webpack to look at 2 entries (app and css) at their corresponding paths and put them in /dist/app.bundle.js and /dist/css.bundle.js respectively. The modules define loaders and how to process files with the .scss extension. In this case it will first be compiled using the sass-loader, then the css will interpret url(..) and import statements and embed the results into the css.bundle.js file found in the dist folder. Finally this is extracted back out using the extract text plugin to a test.css file (which is setup in the plugins array)
+
+To start the build simply run 'webpack' in a terminal window on the root of your project (requires webpack to be installed globally and sufficient rights). Another option is to set the scripts of your packages.json file to the following:
+```javascript
+"scripts": {
+    "start": "webpack-dev-server --watch --progress --inline --open",
+    "build": "webpack --progress"
+},
+``` 
+If these scripts are set, you can also run 'npm run build' in a terminal to do the same.
+
+##### Creating the html
+Create an index.html at the root of your project linking the bundled files created by webpack like the following:
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="dist/test.css">
+    <script src="dist/app.bundle.js"></script>
+</head>
+<body>
+    Content goes here, check docs and examples of soc-core
+</body>
+</html>
+```
+
 
 
 
