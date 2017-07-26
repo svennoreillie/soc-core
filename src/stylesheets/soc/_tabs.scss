@@ -87,5 +87,8 @@
 .soc-main-content {
     >.soc-tabs {
         height: 100%;
+        >.nav-tabs {
+            height: 100%;
+        }
     }
 }
