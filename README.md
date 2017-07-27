@@ -61,7 +61,7 @@ Webpack is an npm package so install it in your devDependencies by running 'npm 
     * sass-loader requires node-sass to be installed as well
 * extract-text-webpack-plugin
 
-it is also handy to install the dev server by running 'npm install --save-dev webpack-dev-server'.
+It's also handy to install the dev server by running 'npm install --save-dev webpack-dev-server'.
 
 ##### Create your own sass style
 Based upon the soc-core style. To do this create 2 files, a {your project}.scss file and a _templatevariables.scss file containing at least the following:
