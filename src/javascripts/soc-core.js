@@ -15,14 +15,21 @@ $(document).ready(function () {
     $(".soc-collapser").click(function (event) {
         event.preventDefault();
         var panel = $(this)
-                        .parents(".soc-panel")
-                        .first();
+            .parents(".soc-panel")
+            .first();
         panel.toggleClass("collapsed");
-        
+
     });
 
     $(".soc-loader-block").click(function (event) {
         event.preventDefault();
     });
+
+    function resizeHeader() {
+        $(".fixed").height($(".fixed>.soc-header").height());
+    }
+
+    resizeHeader();
+    $(window).resize(resizeHeader);
 
 });

@@ -24,19 +24,3 @@
         }
     }
 }
-
-.soc-header {
-    background-color:   $soc-accent-color;
-    color:              $soc-accent-text-color;
-    font-size:          120%;
-    padding:            10px;
-
-    .soc-header-title {
-        font-weight: bold;
-    }
-
-    .soc-header-right {
-        @extend .text-right;
-        @extend .pull-right;
-    }
-}
