@@ -4,6 +4,17 @@ import toastr from 'toastr';
 
 $(document).ready(function () {
 
+    function init() {
+        resizeHeader();
+
+        let elements = $(".soc-main .fixed");
+        if (elements.length > 0) {
+            //fixed header might exist
+            $('soc-main').bind("DOMSubtreeModified", function () {
+                resizeHeader();
+            });
+        }
+    }
 
     //Set actions on sidebar toggler
     $("#soc-sidebar-toggler").click(function (e) {
@@ -25,11 +36,21 @@ $(document).ready(function () {
         event.preventDefault();
     });
 
+    $(window).resize(resizeHeader);
+
+
     function resizeHeader() {
-        $(".fixed").height($(".fixed>.soc-header").height());
+        let items = $(".soc-main .fixed")
+        let height = 0;
+        $.each(items, function (i, element) {
+            height += $(this).height();
+        })
+        if (height != 0) {
+            $(".soc-main-content").css('margin-top', height + 'px');
+        }
     }
 
-    resizeHeader();
-    $(window).resize(resizeHeader);
+
+    init();
 
 });

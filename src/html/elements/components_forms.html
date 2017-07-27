@@ -27,10 +27,11 @@
             <p>Style options are available to change details of the form. Use the following classes next to 'soc-form' to change
                 the form:</p>
             <ul>
-                <li>'inline': Creates a compact inline form</li>
+                <li>'inline': Creates an inline form in which elements float</li>
                 <li>'compact': Uses narrower elements (cannot be used together with inline)</li>
                 <li>'btn-left': Places the buttons on the left hand side</li>
                 <li>'hidden-labels': Removes the labels from screen but keeps them for screenreaders</li>
+                <li>'vertical': Skips the responsive part and goes straight to the vertical form layout</li>
             </ul>
         </div>
 
@@ -121,6 +122,48 @@
             <div class="well"><span>emmet:
                 <pre><code>form.soc-form.compact.btn-left>(div>(label[for="i$"]{Label $}+div>input#i$[type="text" placeholder="item $"]))*4+button[type="submit"]{Save}+button.btn-danger{Cancel}</code></pre>
             </span></div>
+        </div>
+
+        <div class="col-sm-12">
+            <h3>Vertical Form with different elements</h3>
+            <form action="" class="soc-form vertical">
+                <div>
+                    <label for="text">Text</label>
+                    <div><input type="text" id="text" placeholder="item 3"></div>
+                </div>
+                <div>
+                    <label for="number">Numbers</label>
+                    <div><input type="number" id="number" class="form-control"></div>
+                </div>
+                <div>
+                    <label for="cb">Checkbox</label>
+                    <div>
+                        <input type="checkbox" value="">
+                    </div>
+                </div>
+                <div>
+                    <label for="dropdown">Dropdown</label>
+                    <div><select name="" id="dropdown" class="form-control">
+                    <option value="">option 1</option>
+                    <option value="">option 2</option>
+                    <option value="">option 3</option>
+                    <option value="">option 4</option>
+                    <option value="">option 5</option>
+                    <option value="">option 6</option>
+                    <option value="">option 7</option>
+                    <option value="">option 8</option>
+                    <option value="">option 9</option>
+                    <option value="">option 10</option>
+                </select></div>
+                </div>
+                <div>
+                    <label for="static">Static</label>
+                    <div>
+                        <p class="form-control-static" id="static">This is static</p>
+                    </div>
+                </div>
+                <button type="submit">Save</button>
+            </form>
         </div>
     </div>
 </div>

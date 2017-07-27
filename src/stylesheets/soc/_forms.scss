@@ -27,7 +27,7 @@ form.soc-form {
         }
     }
     &.compact {
-        > div {
+        >div {
             @extend .form-group;
             @extend .form-group-sm;
             margin-bottom: 3px;
@@ -42,14 +42,39 @@ form.soc-form {
             }
         }
     }
-    &:not(.inline) {
+    &:not(.inline):not(.vertical) {
         /* Soc forms are horizontal on large screens and vertical on smaller, inline overrides this feature */
         @media (min-width: $screen-md-min) {
+            /* hidden labels override*/
+            &.hidden-labels {
+                label {
+                    display: none;
+                }
+                >div {
+                    /* Shorthand for eleminating bootstrap classes -> first div is always a form-group */
+                    @include make-row;
+                    >div {
+                        /* Shorthand for eleminating bootstrap classes -> inner div is for column setting */
+                        @include make-md-column(12, $gutter: $grid-gutter-width);
+                    }
+                }
+                @media (min-width: $screen-sm-min) {
+                    label {
+                        @include make-md-column($label-col-size, $gutter: $grid-gutter-width);
+                        text-align: $label-align;
+                        margin-bottom: 0;
+                        padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+                    }
+                }
+            }
             /* horizontal bootstrap form when screen is large */
             // Consistent vertical alignment of radios and checkboxes
             //
             // Labels also get some reset styles, but that is scoped to a media query below.
-            .radio, .checkbox, .radio-inline, .checkbox-inline {
+            .radio,
+            .checkbox,
+            .radio-inline,
+            .checkbox-inline {
                 margin-top: 0;
                 margin-bottom: 0;
                 padding-top: ($padding-base-vertical + 1); // Default padding plus a border

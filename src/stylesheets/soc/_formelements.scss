@@ -1,0 +1,19 @@
+form.soc-form {
+    $checkbox-size: 28px;
+    input[type="checkbox"] {
+        width: $checkbox-size;
+        height: $checkbox-size;
+        margin: 4px 0;
+    }
+    &.compact {
+        $checkbox-size: 24px;
+        input[type="checkbox"] {
+            width: $checkbox-size;
+            height: $checkbox-size;
+            margin: 3px 0;
+        }
+    }
+    .form-control-static {
+        height: initial !important;
+    }
+}

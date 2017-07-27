@@ -1,5 +1,7 @@
 .soc-tabs {
-    background-color: $soc-tab-bg-color;
+    .tab-content {
+        background-color: $soc-accent-color;
+    }
     color: $soc-tab-color;
     .nav-tabs {
         border-bottom: none;
@@ -61,11 +63,36 @@
         border: 1px solid $soc-tab-border-color;
         padding-top: 5px;
     }
-
     &.full-height {
         height: 100%;
         >.nav-tabs {
             height: 100%;
+        }
+        &:not(.top) {
+            .tab-pane {
+                border-top: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.follow-header {
+    background-color: $soc-accent-color;
+    color: $soc-accent-text-color;
+    .tab-content {
+        background-color: $soc-accent-color;
+    }
+    .nav-tabs {
+        >li {
+            >a {
+                color: $soc-accent-text-color;
+            }
+            &.active {
+                >a {
+                    color: $soc-body-color;
+                }
+            }
         }
     }
 }
@@ -73,19 +100,6 @@
 .soc-header,
 .soc-stategroup {
     +.soc-tabs:not(.inconsistent) {
-        background-color: $soc-accent-color;
-        color: $soc-accent-text-color;
-        .nav-tabs {
-            >li {
-                >a {
-                    color: $soc-accent-text-color;
-                }
-                &.active {
-                    >a {
-                        color: $soc-body-color;
-                    }
-                }
-            }
-        }
+        @extend .follow-header;
     }
 }

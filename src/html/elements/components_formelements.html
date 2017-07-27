@@ -90,8 +90,13 @@
             <div class="checkbox-inline"><label><input type="checkbox" value="">Check 3</label></div>
             <div class="checkbox-inline"><label><input type="checkbox" value="">Check 4</label></div>
 
+            
+
             <div class="well"><span>emmet:
                 <pre><code>.checkbox>label>input[type="checkbox" value=""]+{Check 1}</code></pre>
+            </span>
+                <span>emmet in soc-form:
+                <pre><code>input[type="checkbox" value=""]</code></pre>
             </span>
                 <span>emmet disabled:
                 <pre><code>.checkbox.disabled>label>input[type="checkbox" disabled value=""]+{Check 1}</code></pre>
@@ -100,9 +105,11 @@
                 <pre><code>.checkbox-inline>label>input[type="checkbox" value=""]+{Check 1}</code></pre>
             </span>
                 <div class="alert alert-warning" role="alert">
-                    Emmet produces a for="" attribute automatically even when not specifying it, other styles can act upon the existence of this
+                    <strong>Warning</strong> Emmet produces a for="" attribute automatically even when not specifying it, other styles can act upon the existence of this
                     attributes and will create an unwanted effect. Make sure to remove it after using it.
                 </div>
+                <div class="alert alert-warning"><strong>Warning</strong> A checkbox should be created different when used inside a soc-form. check the examples
+                and emmet below.</div>
             </div>
 
 
@@ -198,14 +205,14 @@
             <h2>Static text</h2>
             <p>Sometimes helper text is required in a form, the static control can be used for just that. It only makes sense
                 with a label next to it however.</p>
-                <form class="soc-form">
+            <form class="soc-form">
+                <div>
+                    <label>Email</label>
                     <div>
-                        <label>Email</label>
-                        <div>
-                            <p class="form-control-static">email@example.com</p>
-                        </div>
+                        <p class="form-control-static">email@example.com</p>
                     </div>
-                </form>
+                </div>
+            </form>
         </div>
 
         <div class="col-sm-12">
