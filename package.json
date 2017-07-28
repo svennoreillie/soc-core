@@ -1,15 +1,15 @@
 {
   "name": "soc-core",
-  "version": "0.3.20",
+  "version": "0.4.0",
   "description": "Core sass framework based on Bootstrap",
   "main": "src/javascripts/soc-core.js",
   "files": [
     "dist/app.bundle.js",
     "dist/vendor.bundle.js",
-    "dist/shared.bundle.js",
     "dist/soc-core.css",
     "dist/images",
-    "src/stylesheets"
+    "src/stylesheets/soc.scss",
+    "src/javascripts/soc-core.js"
   ],
   "scripts": {
     "start": "webpack-dev-server --watch --progress --inline --open",

@@ -8,7 +8,7 @@ module.exports = {
         sitespecific: './src/javascripts/site-specific',
         app: './src/javascripts/soc-core',
         vendor: ["jquery", "bootstrap-sass", "toastr"],
-        css: './src/stylesheets/soc.scss',
+        css: './src/stylesheets/soc.webpack.scss',
     },
 
     output: {

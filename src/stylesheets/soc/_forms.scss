@@ -11,7 +11,6 @@ form.soc-form {
     >button {
         @extend .btn;
         float: right;
-        margin-left: 5px;
     }
     input {
         @extend .form-control;

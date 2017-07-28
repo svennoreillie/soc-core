@@ -1,13 +1,5 @@
-/**
- * Prerequisites
- * ----------------------------------------------------------------
- * Open Sans
- * Font Awesome
- * Bootstrap
- */
-
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css");
-@import "~toastr/toastr";
+@import "../../../../node_modules/toastr/toastr.scss";
 $icon-font-path: "/bootstrap-sass/assets/fonts/bootstrap/";
-@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";

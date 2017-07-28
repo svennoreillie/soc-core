@@ -43,7 +43,7 @@ $(document).ready(function () {
         let items = $(".soc-main .fixed")
         let height = 0;
         $.each(items, function (i, element) {
-            height += $(this).height();
+            height += element.clientHeight;
         })
         if (height != 0) {
             $(".soc-main-content").css('margin-top', height + 'px');
