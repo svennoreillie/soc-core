@@ -1,9 +1,8 @@
-@import "variables";
-@import "mixins";
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
+//@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
 .soc-sidebar {
     .soc-searchresult {
         width: $soc-sidebar-width;
+        min-height: $soc-searchresult-height;
         height: $soc-searchresult-height;
         background-color: grey;
         padding: 3px;
@@ -64,6 +63,12 @@
             border-left-width: 8px;
         }
         $i: $i+1;
+    }
+}
+
+.soc-sidebar {
+    .soc-search {
+        flex: none;
     }
 }
 

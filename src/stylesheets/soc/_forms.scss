@@ -1,5 +1,5 @@
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms';
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid';
+//@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms';
+//@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid';
 form.soc-form {
     /* Variables for soc form */
     $label-col-size: 2;
@@ -12,7 +12,7 @@ form.soc-form {
         @extend .btn;
         float: right;
     }
-    input {
+    input, select, textarea {
         @extend .form-control;
     }
     &.btn-left {

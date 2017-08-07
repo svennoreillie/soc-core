@@ -1,10 +1,11 @@
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
+//@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
 .soc-actionbar {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 500;
+    min-height: $soc-actionbar-height;
     height: $soc-actionbar-height;
     background-color: $soc-actionbar-bg-color;
     color: $soc-actionbar-color;
@@ -27,7 +28,7 @@
 
 .soc-sidebar {
     .soc-actionbar {
-        position: initial;
+        position: static;
     }
 }
 
