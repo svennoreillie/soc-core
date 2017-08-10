@@ -24,6 +24,10 @@
             font-size: $font-size-large + 7;
         }
     }
+
+    &.fixed {
+        position: fixed;
+    }
 }
 
 .soc-sidebar {

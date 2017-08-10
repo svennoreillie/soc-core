@@ -22,6 +22,8 @@ $(document).ready(function () {
     $("#soctabs").load("elements/components_tabs.html");
     $("#socpanel").load("elements/components_panel.html", panelscompleted);
     $("#soctable").load("elements/components_table.html");
+    $("#socaccordion").load("elements/components_accordion.html");
+    
 
     $("#socforms").load("elements/components_forms.html");
     $("#socformelements").load("elements/components_formelements.html");
