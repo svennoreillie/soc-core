@@ -8,92 +8,99 @@
         >li {
             &.active {
                 >a {
-                color: $soc-body-color;
+                    color: $soc-body-color;
+                    &:hover {
+                        background-color: $soc-body-bg-color;                        
+                    }
+                }
             }
-        }
-        >a {
-            &:hover {
-                border-color: transparent;
+            >a {
+                &:hover {
+                    border-color: transparent;
+                    cursor: pointer;
+                    background-color: darken($soc-tab-bg-color, 8%);
+                }
+                color: $soc-tab-color;
             }
-            color: $soc-tab-color;
         }
     }
-}
-
-&:not(.top) {
-    .nav-tabs {
-        float: left; //margin-right: 19px;
-        width: $soc-tabs-left-width-percent;
-        >li {
-            float: none;
-            margin-bottom: 0;
-            >a {
-                border-right: transparent;
-                margin-right: -2px;
-            }
-            &.active {
+    &:not(.top) {
+        .nav-tabs {
+            float: left; //margin-right: 19px;
+            width: $soc-tabs-left-width-percent;
+            >li {
+                float: none;
+                margin-bottom: 0;
                 >a {
-                    border: 1px solid $soc-tab-border-color;
                     border-right: transparent;
+                    margin-right: -2px;
                 }
+                &.active {
+                    >a {
+                        border: 1px solid $soc-tab-border-color;
+                        border-right: transparent;
+                    }
+                }
+            }
+        }
+        .tab-pane {
+            width: 100% - $soc-tabs-left-width-percent;
+            margin-left: $soc-tabs-left-width-percent;
+        }
+    }
+    &.top {
+        .nav-tabs {
+            >li {
+                >a {
+                    border-bottom: transparent;
+                }
+                &.active {
+                    >a {
+                        border: 1px solid $soc-tab-border-color;
+                        border-bottom: transparent;
+                        margin-bottom: -2px;
+                    }
+                }
+            }
+        }
+        &.follow-header {
+            .tab-pane {
+                border: none;
             }
         }
     }
     .tab-pane {
-        width: 100% - $soc-tabs-left-width-percent;
-        margin-left: $soc-tabs-left-width-percent;
+        background-color: $soc-body-bg-color;
+        color: $soc-body-color;
+        border: 1px solid $soc-tab-border-color;
+        padding-top: 5px;
     }
-}
-
-&.top {
-    .nav-tabs {
-        >li {
-            >a {
-                border-bottom: transparent;
-                margin-bottom: -2px;
-            }
-            &.active {
-                >a {
-                    border: 1px solid $soc-tab-border-color;
-                    border-bottom: transparent;
-                }
-            }
-        }
-    }
-}
-
-.tab-pane {
-    background-color: $soc-body-bg-color;
-    color: $soc-body-color;
-    border: 1px solid $soc-tab-border-color;
-    padding-top: 5px;
-}
-
-&.full-height {
-    height: 100%;
-    >.nav-tabs {
+    &.full-height {
         height: 100%;
-    }
-    &:not(.top) {
-        .tab-pane {
-            border-bottom: 0;
+        >.nav-tabs {
+            height: 100%;
+        }
+        &:not(.top) {
+            .tab-pane {
+                border-bottom: 0;
+            }
         }
     }
 }
 
-
-}
 .follow-header {
     background-color: $soc-accent-color;
     color: $soc-accent-text-color;
     .tab-content {
         background-color: $soc-accent-color;
     }
-
     .nav-tabs {
         >li {
             >a {
                 color: $soc-accent-text-color;
+                &:hover {
+                    background-color: darken($soc-accent-color, 8%);
+                }
             }
             &.active {
                 >a {
@@ -101,11 +108,5 @@
                 }
             }
         }
-    }
-}
-.soc-header,
-.soc-stategroup {
-    +.soc-tabs:not(.inconsistent) {
-        @extend .follow-header;
     }
 }

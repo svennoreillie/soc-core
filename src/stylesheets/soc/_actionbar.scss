@@ -23,11 +23,20 @@
         i {
             font-size: $font-size-large + 7;
         }
+        &.left {
+            float: left;
+            padding-left:10px;
+        }
+        &.right {
+            float: right;
+            padding-right: 10px;
+        }
     }
     &.fixed {
         position: fixed;
     }
 }
+
 
 .soc-sidebar {
     .soc-actionbar {
@@ -44,21 +53,22 @@
 }
 
 .soc-page {
+    &.has-sidebar {
+        .soc-main {
+            .soc-actionbar {
+                &.fixed {
+                    padding-left: $soc-sidebar-width;
+                    @include soc-transition(all, $soc-transition-sidebar-duration, $soc-transition-sidebar-function, $soc-transition-sidebar-delay);
+                }
+            }
+        }
+    }
     &.closed {
         .soc-main {
             .soc-actionbar {
                 border-left: none;
                 &.fixed {
                     padding-left: 0;
-                }
-            }
-        }
-    }
-    &.has-sidebar {
-        .soc-main {
-            .soc-actionbar {
-                &.fixed {
-                    padding-left: $soc-sidebar-width;
                 }
             }
         }
