@@ -57,8 +57,7 @@
                 &.active {
                     >a {
                         border: 1px solid $soc-tab-border-color;
-                        border-bottom: transparent;
-                        margin-bottom: -2px;
+                        border-bottom: 1px solid $soc-body-bg-color;
                     }
                 }
             }
@@ -66,6 +65,14 @@
         &.follow-header {
             .tab-pane {
                 border: none;
+            }
+            >.nav-tabs {
+                >li {
+                    >a {
+                        border: none;
+                    }
+                }
+
             }
         }
     }
