@@ -1,40 +1,44 @@
-    @import url(https://fonts.googleapis.com/css?family=Damion);
-    .soc-typography-name {
-        text-transform: uppercase;
-    }
+@import url(https://fonts.googleapis.com/css?family=Damion);
+.soc-typography-name {
+    text-transform: uppercase;
+}
 
-    .soc-typography-bold {
-        font-weight: bold;
-    }
+.soc-typography-bold {
+    font-weight: bold;
+}
 
-    .soc-not-found {
-        text-align: center;
-        vertical-align: middle;
-        width: 100%;
-        padding-top: 200px;
-        height: 400px;
-        font-size: 275%;
-        &.pipe {
-            padding-top: 0;
-            height: 600px;
-            font-family: 'Damion';
-            &::before {
-                display: block;
-                content: url('/images/pipe.jpg');
-                transform: scale(0.75);
-            }
-        }
-        &.image {
-            padding-top: 0;
-            height: 600px;
-            &::before {
-                display: block;
-                content: url('/images/data.png');
-                transform: scale(0.5);
-            }
-        }
-        >small {
-            font-size: 60%;
+.soc-not-found {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    padding-top: 200px;
+    height: 400px;
+    font-size: 275%;
+    &.pipe {
+        padding-top: 0;
+        height: 600px;
+        font-family: 'Damion';
+        &::before {
             display: block;
+            content: url('/images/pipe.jpg');
+            transform: scale(0.75);
         }
     }
+    &.image {
+        padding-top: 0;
+        height: 600px;
+        &::before {
+            display: block;
+            content: url('/images/data.png');
+            transform: scale(0.5);
+        }
+    }
+    >small {
+        font-size: 60%;
+        display: block;
+    }
+}
+
+.soc-validation-error {
+    color: red;
+}
